@@ -1,0 +1,109 @@
+.preloader {
+  --time-load: 0.1s;
+  --time-load-delay: 0.1s;
+  --total-loading-bar: calc(var(--time-load) + var(--time-load-delay));
+  --time-panel: 0.8s;
+  --total-time: calc(
+    var(--time-load) + var(--time-load-delay) + var(--time-panel)
+  );
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: row;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  overflow: hidden;
+  animation: hideAfterLoad 0.1s ease-in-out var(--total-time) forwards;
+  > :nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: blueviolet;
+    position: relative;
+    transition: left ease-out;
+    animation: leaveLeft var(--time-panel) ease-in-out var(--total-loading-bar)
+      forwards;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 100%;
+      top: 50%;
+      height: 0%;
+      transform: translateY(-50%) translateX(-50%);
+      border-left: 4px solid white;
+      animation: expandHeight var(--time-load) ease-in-out
+        var(--time-load-delay) forwards;
+    }
+  }
+  > :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    background-color: green;
+    transition: left ease-out;
+    animation: leaveRight var(--time-panel) ease-in-out var(--total-loading-bar)
+      forwards;
+  }
+}
+/* Keyframes definition */
+@keyframes expandHeight {
+  0% {
+    height: 0;
+  }
+  10% {
+    height: 10%;
+  }
+  40% {
+    height: 80%;
+  }
+  70% {
+    height: 90%;
+  }
+  99% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes leaveLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes leaveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes hideAfterLoad {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+}
