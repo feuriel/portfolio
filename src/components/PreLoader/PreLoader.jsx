@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./PreLoader.css";
 
 export const PreLoader = () => {
-  const [done, setDone] = useState(true);
   useEffect(() => {
-    if (done) {
-      console.log("coucou");
-    }
-  }, [done]);
+    // Disable scrolling when preloader mounts
+    document.body.style.overflow = "hidden";
+  }, []);
+  setTimeout(() => {
+    // Re-enable scrolling when preloader unmounts
+    document.body.style.overflow = "visible";
+  }, 1400);
+  //document.body.style.overflow = "hidden";
   return (
     <div className="preloader">
       <div>G</div>

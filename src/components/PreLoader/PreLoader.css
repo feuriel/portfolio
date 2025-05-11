@@ -1,5 +1,5 @@
 .preloader {
-  --time-load: 0.1s;
+  --time-load: 0.9s;
   --time-load-delay: 0.1s;
   --total-loading-bar: calc(var(--time-load) + var(--time-load-delay));
   --time-panel: 0.8s;
@@ -14,12 +14,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   justify-content: stretch;
   align-items: stretch;
   flex-direction: row;
-  min-width: 100dvw;
+  min-width: calc(100dvw - 15px);
   min-height: 100dvh;
   overflow: hidden;
   animation: hideAfterLoad 0.1s ease-in-out var(--total-time) forwards;
