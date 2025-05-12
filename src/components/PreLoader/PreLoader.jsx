@@ -9,12 +9,12 @@ export const PreLoader = () => {
   setTimeout(() => {
     // Re-enable scrolling when preloader unmounts
     document.body.style.overflow = "visible";
-  }, 1400);
+  }, 1800);
   //document.body.style.overflow = "hidden";
   return (
     <div className="preloader">
       <div>G</div>
-      <div>S</div>
+      <div>G</div>
     </div>
   );
 };

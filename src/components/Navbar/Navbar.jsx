@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { Logo } from "../Logo/Logo.jsx";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full max-w-7xl py-5 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="fixed left-0 right-0 m-auto top-0 z-50 w-full max-w-7xl px-5 py-2 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Desktop Layout (grid-cols-3) */}
       <div className="hidden md:grid grid-cols-3 w-full items-center">
-        <div className="justify-self-start">Logo</div>
+        <a href="#" className="justify-self-start">
+          <Logo size={54} color={"white"} />
+        </a>
         <div className="flex gap-6 justify-self-center">
           <a href="#about">About</a>
           <a href="#leadership">Leadership</a>

@@ -1,10 +1,10 @@
 import React from "react";
 
-export const About = () => {
+export const Projects = () => {
   return (
-    <section id="about" className="flex justify-center items-center">
+    <section id="projects" className="flex justify-center items-center">
       <section className="w-full about max-w-7xl bg-slate-700 min-h-dvh">
-        About blabla
+        About Projects
       </section>
     </section>
   );
