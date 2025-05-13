@@ -1,0 +1,6 @@
+.logo {
+  transition: transform 200ms ease-in-out;
+  &:hover {
+    transform: rotateZ(180deg);
+  }
+}

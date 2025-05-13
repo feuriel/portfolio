@@ -1,23 +1,32 @@
 import { useState } from "react";
 import { Logo } from "../Logo/Logo.jsx";
+import "./Navbar.css";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed left-0 right-0 m-auto top-0 z-50 w-full max-w-7xl px-5 py-2 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="navbar fixed left-0 right-0 m-auto top-0 z-50 w-full max-w-7xl px-5 py-2 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Desktop Layout (grid-cols-3) */}
       <div className="hidden md:grid grid-cols-3 w-full items-center">
         <a href="#" className="justify-self-start">
           <Logo size={54} color={"white"} />
         </a>
         <div className="flex gap-6 justify-self-center">
-          <a href="#about">About</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#projects">Projects</a>
+          <a className="hover-underline-animation" href="#about">
+            About
+          </a>
+          <a className="hover-underline-animation" href="#experiences">
+            Experiences
+          </a>
+          <a className="hover-underline-animation" href="#projects">
+            Projects
+          </a>
         </div>
         <div className="justify-self-end">
-          <a href="#contact">Contact</a>
+          <a className="hover-underline-animation" href="#contact">
+            Contact
+          </a>
         </div>
       </div>
 
@@ -38,8 +47,8 @@ export const Navbar = () => {
           <a href="#about" onClick={() => setIsMenuOpen(false)}>
             About
           </a>
-          <a href="#leadership" onClick={() => setIsMenuOpen(false)}>
-            Leadership
+          <a href="#experiences" onClick={() => setIsMenuOpen(false)}>
+            Experiences
           </a>
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>
             Projects

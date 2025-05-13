@@ -1,4 +1,5 @@
 import React from "react";
+import "./Logo.css";
 
 export const Logo = ({
   size = "100%", // Default size (matches original)
@@ -6,6 +7,7 @@ export const Logo = ({
 }) => {
   return (
     <svg
+      className="logo"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

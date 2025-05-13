@@ -1,0 +1,16 @@
+.apparition {
+  opacity: 0;
+  animation: appear attr(data-anim-delay s, 2s) ease attr(data-anim ms) forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

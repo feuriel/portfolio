@@ -14,7 +14,7 @@ export const PreLoader = () => {
   return (
     <div className="preloader">
       <div>G</div>
-      <div>G</div>
+      <div>S</div>
     </div>
   );
 };
