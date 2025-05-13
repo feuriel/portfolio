@@ -6,6 +6,7 @@ export const Apparition = ({
   time = 800,
   delay = 1.9,
   className = "",
+  // eslint-disable-next-line no-unused-vars
   as: Tag = "div", // Defaults to div, but can be any HTML tag
 }) => {
   const allChars = text.split("");
