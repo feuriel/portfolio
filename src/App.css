@@ -8,6 +8,7 @@
 
 #root {
   margin: 0 auto;
+  --primary-color: oklch(0.73 0.1603 155.65);
 }
 
 body {

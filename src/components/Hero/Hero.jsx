@@ -29,10 +29,11 @@ export const Hero = () => {
           </h2>
           <h3 className="text-lg">
             From leading global tech teams to crafting elegant code, I bridge
-            innovation and execution—discover how.
+            innovation and execution.
           </h3>
           <div>
             <a>Explore my journey</a>
+            <a></a>
           </div>
         </div>
       </section>
