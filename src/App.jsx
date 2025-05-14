@@ -23,7 +23,6 @@ function App() {
       <Projects />
       <SectionDivider />
       <Contact />
-      <SectionDivider />
       <Footer />
     </>
   );

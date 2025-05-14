@@ -3,7 +3,7 @@ import React from "react";
 export const About = () => {
   return (
     <section id="about" className="flex justify-center items-center">
-      <section className="w-full about max-w-7xl min-h-dvh">
+      <section className="w-full about max-w-7xl min-h-dvh px-4 md:px-12 xl:px-4">
         <div>
           <h3>Hi there! I'm Gabriel !</h3>
           <p>

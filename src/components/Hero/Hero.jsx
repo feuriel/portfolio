@@ -4,7 +4,7 @@ import { Apparition } from "./Apparition.jsx";
 export const Hero = () => {
   return (
     <section id="hero" className="hero flex justify-center items-center">
-      <section className="flex justify-center items-center min-h-dvh max-w-7xl">
+      <section className="flex justify-center items-center min-h-dvh max-w-7xl px-4 md:px-12 xl:px-4">
         <div></div>
         <div className="flex flex-col justify-center items-center  px-6">
           <Apparition

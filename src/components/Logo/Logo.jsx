@@ -2,12 +2,13 @@ import React from "react";
 import "./Logo.css";
 
 export const Logo = ({
-  size = "100%", // Default size (matches original)
-  color = "#000000", // Default color
+  size = "54", // Default size (matches original)
+  color = "#ffffff", // Default color
+  className = "logo",
 }) => {
   return (
     <svg
-      className="logo"
+      className={className}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

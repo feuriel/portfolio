@@ -3,7 +3,7 @@ import React from "react";
 export const Experience = () => {
   return (
     <section id="experiences" className="flex justify-center items-center">
-      <section className="w-full about max-w-7xl bg-slate-700 min-h-dvh">
+      <section className="w-full about max-w-7xl bg-slate-700 min-h-dvh px-4 md:px-12 xl:px-4">
         <h4>My journey so far :)</h4>
         <ul>
           <li>
