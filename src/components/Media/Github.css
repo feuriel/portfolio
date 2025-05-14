@@ -1,0 +1,11 @@
+.github-icon path {
+  transition: fill 170ms ease;
+}
+
+.github-icon:hover path.github-in {
+  fill: #121212;
+}
+
+.github-icon:hover path.github-bg {
+  fill: #ffffff;
+}

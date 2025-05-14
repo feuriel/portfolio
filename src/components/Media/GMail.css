@@ -1,0 +1,22 @@
+.gmail-icon path {
+  transition: fill 170ms ease;
+}
+
+.gmail-icon:hover path:nth-of-type(n + 5) {
+  fill: #121212;
+}
+.gmail-icon:hover path:nth-of-type(1) {
+  fill: #ead032;
+}
+.gmail-icon:hover path:nth-of-type(2) {
+  fill: #e85654;
+}
+.gmail-icon:hover path:nth-of-type(3) {
+  fill: #8cc78c;
+}
+.gmail-icon:hover path:nth-of-type(4) {
+  fill: #40a6dd;
+}
+.gmail-icon:hover polygon:nth-of-type(1) {
+  fill: #f16e7c;
+}

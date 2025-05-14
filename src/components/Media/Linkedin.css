@@ -1,10 +1,11 @@
-.linkedin-icon {
-  path {
-    fill: #00000000;
-  }
+.linkedin-icon path {
+  transition: fill 170ms ease;
 }
-.linkedin-icon:hover {
-  path {
-    fill: #0288d1;
-  }
+
+.linkedin-icon:hover path.linkedin-in {
+  fill: white;
+}
+
+.linkedin-icon:hover path.linkedin-bg {
+  fill: #0288d1;
 }
