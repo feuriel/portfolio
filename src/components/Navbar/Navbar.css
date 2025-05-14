@@ -12,7 +12,7 @@
   bottom: 0;
   left: 0;
   background-color: var(--primary-color, rgba(255, 255, 255, 0.87));
-  transition: transform 0.1s ease-out;
+  transition: transform 0.17s ease-out;
   transform-origin: bottom right;
 }
 
