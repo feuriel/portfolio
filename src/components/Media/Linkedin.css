@@ -1,0 +1,10 @@
+.linkedin-icon {
+  path {
+    fill: #00000000;
+  }
+}
+.linkedin-icon:hover {
+  path {
+    fill: #0288d1;
+  }
+}

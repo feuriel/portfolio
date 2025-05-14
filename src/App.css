@@ -2,13 +2,17 @@
 
 @layer base {
   html {
-    font-family: "Figtree", system-ui, Avenir, Helvetica, Arial, sans-serif; /* Replace with your font */
+    font-family: "Figtree", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
   }
+}
+
+:root {
+  --primary-color: oklch(0.73 0.1603 155.65);
 }
 
 #root {
   margin: 0 auto;
-  --primary-color: oklch(0.73 0.1603 155.65);
 }
 
 body {

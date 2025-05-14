@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background-color: blueviolet;
+    background-color: #121212;
     position: relative;
     transition: left ease-out;
     animation: leaveLeft var(--time-panel) ease-in-out var(--total-loading-bar)
@@ -53,7 +53,7 @@
     align-items: center;
     flex-grow: 1;
     position: relative;
-    background-color: green;
+    background-color: #121212;
     transform: rotateZ(180deg);
     transition: left ease-out;
     animation: leaveRight var(--time-panel) ease-in-out var(--total-loading-bar)
