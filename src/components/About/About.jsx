@@ -1,11 +1,10 @@
 import React from "react";
+import "./About.css";
+import { Section } from "../Section/Section";
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="m-auto w-full about max-w-7xl min-h-dvh pt-20 px-4 md:px-12 xl:px-4"
-    >
+    <Section id="about" className="min-h-dvh">
       <div>
         <h3>Hi there! I'm Gabriel !</h3>
         <p>
@@ -46,6 +45,6 @@ export const About = () => {
           </li>
         </ul>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import { Apparition } from "./Apparition.jsx";
+import { Section } from "../Section/Section.jsx";
 
 export const Hero = () => {
   return (
     <section id="hero" className="hero flex justify-center items-center">
-      <section className="flex justify-center items-center min-h-dvh max-w-7xl px-4 md:px-12 xl:px-4">
+      <Section className="flex justify-center items-center min-h-dvh">
         <div></div>
         <div className="flex flex-col justify-center items-center  px-6">
           <Apparition
@@ -36,7 +37,7 @@ export const Hero = () => {
             <a></a>
           </div>
         </div>
-      </section>
+      </Section>
     </section>
   );
 };

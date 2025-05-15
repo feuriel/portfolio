@@ -1,12 +1,14 @@
 import React from "react";
 import { Media } from "../Media/Media.jsx";
 import { Logo } from "../Logo/Logo.jsx";
+import { Section } from "../Section/Section.jsx";
 
 export const Footer = () => {
   return (
-    <footer
+    <Section
       id="footer"
-      className="m-auto w-full grid grid-cols-2 md:grid-cols-3 max-w-7xl py-12 px-4 md:px-12 xl:px-4"
+      as="footer"
+      className="grid grid-cols-2 md:grid-cols-3  py-12"
     >
       <div className="justify-self-start">
         <a href="#">
@@ -20,6 +22,6 @@ export const Footer = () => {
       <div className="justify-self-end md:justify-self-center">
         <Media withGithub={true} withGoogle={true} withLinkedin={true} />
       </div>
-    </footer>
+    </Section>
   );
 };

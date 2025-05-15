@@ -1,11 +1,9 @@
 import React from "react";
+import { Section } from "../Section/Section";
 
 export const Experience = () => {
   return (
-    <section
-      id="experiences"
-      className="m-auto w-full max-w-7xl bg-slate-700 min-h-dvh pt-20 px-4 md:px-12 xl:px-4"
-    >
+    <Section id="experiences" className="min-h-dvh">
       <h4>My journey so far :)</h4>
       <ul>
         <li>
@@ -25,6 +23,6 @@ export const Experience = () => {
           applications
         </li>
       </ul>
-    </section>
+    </Section>
   );
 };

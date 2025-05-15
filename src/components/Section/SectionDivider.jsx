@@ -1,6 +1,6 @@
 import React from "react";
 import "./SectionDivider.css";
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect, useState } from "react";
 import debounce from "../../utility/debounce";
 
 export const SectionDivider = () => {
@@ -25,12 +25,12 @@ export const SectionDivider = () => {
     );
   };
   // Memoize the debounced resize handler
-  const handleResize = useCallback(
-    debounce(() => {
-      setLineWidth(window.innerWidth + 40);
-    }, 150),
-    []
-  ); // Empty dependency for creating it only once
+  // const handleResize = useCallback(
+  //   debounce(() => {
+  //     setLineWidth(window.innerWidth + 40);
+  //   }, 150),
+  //   []
+  // ); // Empty dependency for creating it only once
   const [transform, setTransform] = useState(
     "perspective(1000px) rotateX(1.8354deg) rotateY(-20.36076deg) rotate(0deg)"
   );
@@ -38,6 +38,9 @@ export const SectionDivider = () => {
   //const [left, setLeft] = useState("0px");
   const elementRef = useRef(null);
   useEffect(() => {
+    const handleResize = debounce(() => {
+      setLineWidth(window.innerWidth + 40);
+    }, 150);
     setLineWidth(window.innerWidth + 40);
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("resize", handleResize);
