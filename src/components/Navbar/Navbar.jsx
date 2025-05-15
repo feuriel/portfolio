@@ -31,7 +31,7 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Layout (hamburger menu) */}
-      <div className="md:hidden flex justify-between items-center px-4 py-3">
+      <div className="md:hidden flex justify-between items-center px-4">
         <div className="font-bold">
           <Logo />
         </div>

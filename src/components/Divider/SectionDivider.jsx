@@ -1,6 +1,7 @@
 import React from "react";
 import "./SectionDivider.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
+import debounce from "../../utility/debounce";
 
 export const SectionDivider = () => {
   const handleMouseMove = (event) => {
@@ -23,6 +24,13 @@ export const SectionDivider = () => {
       `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotatez(0deg)`
     );
   };
+  // Memoize the debounced resize handler
+  const handleResize = useCallback(
+    debounce(() => {
+      setLineWidth(window.innerWidth + 40);
+    }, 150),
+    []
+  ); // Empty dependency for creating it only once
   const [transform, setTransform] = useState(
     "perspective(1000px) rotateX(1.8354deg) rotateY(-20.36076deg) rotate(0deg)"
   );
@@ -31,16 +39,13 @@ export const SectionDivider = () => {
   const elementRef = useRef(null);
   useEffect(() => {
     setLineWidth(window.innerWidth + 40);
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("resize", () => {
-      () => {
-        setLineWidth(window.innerWidth + 40);
-      };
-    });
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("resize", handleResize);
 
     //setLeft(`-${(window.innerWidth - elementRef.current.offsetWidth) / 2}px`); -- no need if not maxed at 1280px
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
