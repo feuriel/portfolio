@@ -52,7 +52,7 @@ export const SectionDivider = () => {
     };
   }, []);
   return (
-    <div ref={elementRef} className="interactive-divider">
+    <div ref={elementRef} className="interactive-divider hidden md:block">
       <div
         className="line"
         style={{ transform, width: lineWidth, left: "-20px" }}

@@ -33,7 +33,9 @@ export const Navbar = () => {
       {/* Mobile Layout (hamburger menu) */}
       <div className="md:hidden flex justify-between items-center px-4">
         <div className="font-bold">
-          <Logo />
+          <a href="#" className="justify-self-start">
+            <Logo />
+          </a>
         </div>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
