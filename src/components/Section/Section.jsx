@@ -8,7 +8,7 @@ export const Section = ({
 }) => {
   const totalClassNames = `relative m-auto w-full max-w-7xl pt-20 px-4 md:px-12 xl:px-4 ${className}`;
   return (
-    <Tag className={totalClassNames} id={id}>
+    <Tag id={id} className={totalClassNames}>
       {children}
     </Tag>
   );
