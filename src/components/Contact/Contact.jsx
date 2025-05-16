@@ -4,7 +4,7 @@ import "./Contact.css";
 
 export const Contact = () => {
   return (
-    <Section id="contact" data-title="contact" className="min-h-dvh">
+    <Section id="contact" data-before-content="contact" className="min-h-dvh">
       blabla contact
     </Section>
   );

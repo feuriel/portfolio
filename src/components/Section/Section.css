@@ -2,7 +2,7 @@
   position: absolute;
   display: none;
   z-index: -1;
-  content: attr(data-title);
+  content: attr(data-before-content);
   line-height: 0.8;
   left: var(--left, -0.2rem);
   top: var(--top, 0);

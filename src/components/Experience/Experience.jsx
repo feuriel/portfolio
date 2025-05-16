@@ -4,7 +4,11 @@ import "./Experience.css";
 
 export const Experience = () => {
   return (
-    <Section id="experiences" className="min-h-dvh" data-title={"journey"}>
+    <Section
+      id="experiences"
+      className="min-h-dvh"
+      data-before-content="journey"
+    >
       <h4>My journey so far :)</h4>
       <ul>
         <li>

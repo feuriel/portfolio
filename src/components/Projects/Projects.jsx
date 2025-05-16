@@ -4,7 +4,7 @@ import "./Projects.css";
 
 export const Projects = () => {
   return (
-    <Section id="projects" className="min-h-dvh" data-title="projects">
+    <Section id="projects" className="min-h-dvh" data-before-content="projects">
       Projects
     </Section>
   );
