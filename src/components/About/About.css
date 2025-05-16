@@ -5,3 +5,13 @@
     --top: 10rem;
   }
 }
+
+.about em {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about h3 {
+  color: var(--text-color);
+}

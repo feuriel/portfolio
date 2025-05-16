@@ -6,49 +6,83 @@ export const About = () => {
   return (
     <Section
       id="about"
-      className={`min-h-dvh grid grid-cols-2 `}
+      className={`about min-h-dvh grid gap-4 grid-cols-1 md:grid-cols-2 `}
       data-before-content={"about"}
     >
       <div>
         <img src="https://preetheme.com/html/flowa/assets/img/hero.png" />
       </div>
-      <div>
-        <h3>Hi there! I'm Gabriel !</h3>
+      <div className="text-gray-400 flex justify-center flex-col gap-6">
+        <h3>Hi there, I'm Gabriel !</h3>
         <p>
           I am a <em>tech lead and team catalyst</em> who wears many hats - and
-          loves every one of them. At heart, I'm a leader who believes great
-          software emerges when teams feel empowered, connected, and inspired.
-          My superpower is
-          <em> connecting people and ideas</em> - whether that's bridging
-          engineers with designers, aligning tech with business goals, or
-          mentoring developers into confident leaders.
+          loves every one of them. With <em>10 years of experience</em>, I
+          orchestrate environments where great software emerges from empowered
+          and connected teams. My superpower is
+          <em> connecting people and ideas</em> - spotting invisible synergies
+          between engineers, designers, and business goals, then wiring them for
+          success.
         </p>
-        <h4>What drives me</h4>
-        <ul>
+        <div className="flex gap-4 justify-center md:justify-start">
+          <a
+            href="#contact"
+            className="flex gap-2 px-5 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 
+          text-black font-medium rounded-md transition-colors duration-150 pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+              ></path>
+            </svg>
+            Contact me
+          </a>
+          <a
+            href="#projects"
+            className="px-5 py-3 bg-neutral-800 hover:bg-neutral-900 
+           font-medium rounded-md transition-colors duration-150 pointer text-[color:var(--text-color)]"
+          >
+            See my projects
+          </a>
+        </div>
+      </div>
+      <div className="text-gray-400 md:col-span-2">
+        <h4 className="pb-4">What drives me:</h4>
+        <ul className="pb-4 *:pb-2">
           <li>
-            🤝 People-first - Cultivating teams where engineers thrive, not just
-            deliver
+            <em>🤝 People-first</em> - Cultivating teams where engineers thrive,
+            not just deliver
           </li>
           <li>
-            🚀 Connecting the dot - Bridging design, business, and engineering
-            with equal fluency
+            <em>🚀 Connecting the dots</em> - Bridging design, business, and
+            engineering with equal fluency
           </li>
           <li>
-            🧠 Continuous learning - Exploring how AI can elevate both products
-            and teams
+            <em>🧠 Continuous learning</em> - Exploring how AI can elevate both
+            products and teams
           </li>
         </ul>
-        <h4>Beyond work, you can find me:</h4>
-        <ul>
+        <h4 className="pb-4">Beyond work, you can find me:</h4>
+        <ul className="pb-6 *:pb-2">
           <li>
-            💻 Tinkering with side projects - From AI experiments to nostalgic
-            game mods
+            <em>💻 Tinkering with side projects</em> - From AI experiments to
+            nostalgic game mods
           </li>
           <li>
-            🎲 Designing board games - Where UX principles meet offline fun
+            <em>🎲 Designing board games</em> - Where UX principles meet offline
+            fun
           </li>
           <li>
-            🎶 Improvising on some instruments - Last in date, the handpan !
+            <em>🎶 Improvising on some instruments</em> - Last in date, the
+            handpan !
           </li>
         </ul>
       </div>

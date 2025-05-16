@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   html {
     font-family: "Figtree", system-ui, Avenir, Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
   }
+
+  h3 {
+    @apply text-2xl md:text-4xl font-bold;
+  }
 }
 
 :root {
   --primary-color: oklch(0.73 0.1603 155.65);
+  --primary-hover: oklch(0.63 0.1603 155.65);
+  --text-color: rgba(255, 255, 255, 0.87);
 }
 
 #root {
@@ -19,6 +29,7 @@ body {
   margin: 0;
   background-color: #121212;
   color: rgba(255, 255, 255, 0.87);
+
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
