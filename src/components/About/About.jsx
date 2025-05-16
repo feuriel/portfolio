@@ -4,7 +4,14 @@ import { Section } from "../Section/Section";
 
 export const About = () => {
   return (
-    <Section id="about" className="min-h-dvh">
+    <Section
+      id="about"
+      className={`min-h-dvh grid grid-cols-2 `}
+      data-title={"ABOUT"}
+    >
+      <div>
+        <img src="https://preetheme.com/html/flowa/assets/img/hero.png" />
+      </div>
       <div>
         <h3>Hi there! I'm Gabriel !</h3>
         <p>

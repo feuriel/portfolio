@@ -1,0 +1,7 @@
+@media (width >= 80rem) {
+  /* lg or tailwind */
+  #experiences::before {
+    --left: -13.5rem;
+    --top: 15.5rem;
+  }
+}

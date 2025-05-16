@@ -39,7 +39,7 @@ body {
   border-radius: 3px;
 }
 
-* {
+body {
   scrollbar-width: thin;
   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 }

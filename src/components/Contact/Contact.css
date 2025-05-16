@@ -1,0 +1,11 @@
+@media (width >= 80rem) {
+  /* lg or tailwind */
+  #contact::before {
+    --left: -13.5rem;
+    --top: 15.5rem;
+  }
+}
+
+#contact {
+  border: 2px solid violet;
+}

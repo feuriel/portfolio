@@ -1,9 +1,10 @@
 import React from "react";
 import { Section } from "../Section/Section";
+import "./Projects.css";
 
 export const Projects = () => {
   return (
-    <Section id="projects" className="bg-slate-700 min-h-dvh">
+    <Section id="projects" className="min-h-dvh" data-title="projects">
       Projects
     </Section>
   );

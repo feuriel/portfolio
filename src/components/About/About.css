@@ -1,7 +1,7 @@
-#about::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: red;
+@media (width >= 80rem) {
+  /* lg or tailwind */
+  #about::before {
+    --left: -8rem;
+    --top: 10rem;
+  }
 }
