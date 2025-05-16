@@ -26,7 +26,7 @@ export const About = () => {
         <div className="flex gap-4 justify-center md:justify-start">
           <a
             href="#contact"
-            className="flex gap-2 px-5 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 
+            className="flex gap-2 px-4 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 
           text-black font-medium rounded-md transition-colors duration-150 pointer"
           >
             <svg
@@ -35,7 +35,7 @@ export const About = () => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="w-6 h-6 hidden lg:block"
             >
               <path
                 stroke-linecap="round"
@@ -47,7 +47,7 @@ export const About = () => {
           </a>
           <a
             href="#projects"
-            className="px-5 py-3 bg-neutral-800 hover:bg-neutral-900 
+            className="px-4 py-3 bg-neutral-800 hover:bg-neutral-900 
            font-medium rounded-md transition-colors duration-150 pointer text-[color:var(--text-color)]"
           >
             See my projects
