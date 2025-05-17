@@ -24,18 +24,12 @@ export const SectionDivider = () => {
       `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotatez(0deg)`
     );
   };
-  // Memoize the debounced resize handler
-  // const handleResize = useCallback(
-  //   debounce(() => {
-  //     setLineWidth(window.innerWidth + 40);
-  //   }, 150),
-  //   []
-  // ); // Empty dependency for creating it only once
+
   const [transform, setTransform] = useState(
     "perspective(1000px) rotateX(1.8354deg) rotateY(-20.36076deg) rotate(0deg)"
   );
   const [lineWidth, setLineWidth] = useState("100%");
-  //const [left, setLeft] = useState("0px");
+
   const elementRef = useRef(null);
   useEffect(() => {
     const handleResize = debounce(() => {
@@ -45,7 +39,6 @@ export const SectionDivider = () => {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("resize", handleResize);
 
-    //setLeft(`-${(window.innerWidth - elementRef.current.offsetWidth) / 2}px`); -- no need if not maxed at 1280px
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleResize);
