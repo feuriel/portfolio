@@ -7,7 +7,6 @@ const useDiagonalAngle = (ref) => {
 
   useEffect(() => {
     const updateAngle = () => {
-      console.log("toto");
       if (ref && ref.current && ref.current) {
         const width = ref.current.offsetWidth;
         const height = ref.current.offsetHeight;
