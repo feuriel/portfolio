@@ -1,6 +1,7 @@
 import React from "react";
 import { Section } from "../Section/Section";
 import "./Experience.css";
+import { Timeline } from "./Timeline";
 
 export const Experience = () => {
   return (
@@ -8,27 +9,10 @@ export const Experience = () => {
       id="experiences"
       className="min-h-dvh"
       data-before-content="journey"
-      finished={false}
+      finished={true}
     >
-      <h4>My journey so far :)</h4>
-      <ul>
-        <li>
-          At Booking.com, I lead 10 engineers by creating space for both
-          technical excellence and human connection
-        </li>
-        <li>
-          At Match Group, I united data scientists, marketers, and engineers to
-          build dating apps that understood human chemistry
-        </li>
-        <li>
-          At Bouygues Telecom, I aligned mobile/web teams to solve network
-          issues impacting real lives
-        </li>
-        <li>
-          Leading global teams at Dassault Systèmes to build enterprise web
-          applications
-        </li>
-      </ul>
+      <h3 className="mt-[-2rem] mb-[1rem] md:hidden">My journey so far </h3>
+      <Timeline />
     </Section>
   );
 };

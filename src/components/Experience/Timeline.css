@@ -1,0 +1,89 @@
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: var(--timeline-height, 50%);
+  background-color: var(--primary-color);
+  top: 0;
+  left: 1.25rem;
+  margin-left: -1px;
+  z-index: -1;
+  transition: height 0.5s ease-out;
+  will-change: height;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 3rem 2rem 3rem;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  animation: timelineItem 1s linear forwards;
+  --svg-size: 2.5rem;
+}
+
+.timeline-item:nth-child(2n) {
+  left: 0;
+}
+
+/* Custom media queries using Tailwind's breakpoints */
+@media (min-width: theme("screens.lg")) {
+  /* Styles for sm screens and up */
+  .timeline::after {
+    left: 50%;
+  }
+  .timeline-item {
+    width: 50%;
+  }
+  .timeline-item:nth-child(2n) {
+    left: 50%;
+  }
+}
+
+@media (width > theme("screens.xl")) {
+  .timeline-item {
+    /* lg or tailwind */
+    --svg-size: 3.5rem;
+  }
+}
+
+@keyframes timelineItem {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item .svg-container {
+  position: absolute;
+  width: var(--svg-size, 2.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: none;
+  /* border: 1px solid oklch(from var(--primary-color) l c h / 0.7); */
+  right: calc(100% - 2.5rem);
+  filter: grayscale(0.8);
+}
+.timeline-item:nth-child(2n) .svg-container {
+  left: 0;
+}
+@media (min-width: theme("screens.lg")) {
+  .timeline-item:nth-child(2n) .svg-container {
+    left: calc(var(--svg-size, 2.5rem) * (-1) / 2);
+  }
+  .timeline-item .svg-container {
+    right: calc(var(--svg-size, 2.5rem) * (-1) / 2);
+  }
+}
+
+.timeline-item .svg-container svg {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 68%;
+  height: 68%;
+}

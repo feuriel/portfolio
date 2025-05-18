@@ -58,31 +58,31 @@ export const About = () => {
         <h4 className="pb-4">What drives me:</h4>
         <ul className="pb-4 *:pb-2">
           <li>
-            <em>🤝 People-first</em> - Cultivating teams where engineers thrive,
+            <em>People-first</em> - Cultivating teams where engineers thrive,
             not just deliver
           </li>
           <li>
-            <em>🚀 Connecting the dots</em> - Bridging design, business, and
+            <em>Connecting the dots</em> - Bridging design, business, and
             engineering with equal fluency
           </li>
           <li>
-            <em>🧠 Continuous learning</em> - Exploring how AI can elevate both
+            <em>Continuous learning</em> - Exploring how AI can elevate both
             products and teams
           </li>
         </ul>
         <h4 className="pb-4">Beyond work, you can find me:</h4>
         <ul className="pb-6 *:pb-2">
           <li>
-            <em>💻 Tinkering with side projects</em> - From AI experiments to
+            <em>Tinkering with side projects</em> - From AI experiments to
             nostalgic game mods
           </li>
           <li>
-            <em>🎲 Designing board games</em> - Where UX principles meet offline
+            <em>Designing board games</em> - Where UX principles meet offline
             fun
           </li>
           <li>
-            <em>🎶 Improvising on some instruments</em> - Last in date, the
-            handpan !
+            <em>Improvising on some instruments</em> - Last in date, the handpan
+            !
           </li>
         </ul>
       </div>
