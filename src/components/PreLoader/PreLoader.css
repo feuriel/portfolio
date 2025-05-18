@@ -56,7 +56,6 @@
     flex-grow: 1;
     position: relative;
     background-color: #121212;
-    transform: rotateZ(180deg);
     transition: left ease-out;
     animation: leaveRight var(--time-panel) ease-in-out var(--total-loading-bar)
       forwards;

@@ -1,0 +1,23 @@
+.police-line {
+  position: relative;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    yellow,
+    yellow 20px,
+    black 20px,
+    black 40px
+  );
+  transform: rotate(var(--angle, 45deg));
+  transform-origin: 0 0;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.police-line::before {
+  content: "UNDER CONSTRUCTION";
+  position: absolute;
+  top: -2rem;
+  left: 3rem;
+  color: white;
+}

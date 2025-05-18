@@ -34,8 +34,12 @@ export const Hero = () => {
             />
           </h2>
           <h3 className="text-lg font-normal">
-            From leading global tech teams to crafting elegant code, I bridge
-            innovation and execution.
+            From leading global tech teams to crafting
+            <span title="clean, robust, and adaptable">
+              {" "}
+              elegant{/* add easter egg here */}
+            </span>{" "}
+            code, I bridge innovation and execution.
           </h3>
           <div></div>
         </div>

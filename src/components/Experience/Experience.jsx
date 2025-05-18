@@ -8,6 +8,7 @@ export const Experience = () => {
       id="experiences"
       className="min-h-dvh"
       data-before-content="journey"
+      finished={false}
     >
       <h4>My journey so far :)</h4>
       <ul>

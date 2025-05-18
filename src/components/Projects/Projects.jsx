@@ -4,7 +4,12 @@ import "./Projects.css";
 
 export const Projects = () => {
   return (
-    <Section id="projects" className="min-h-dvh" data-before-content="projects">
+    <Section
+      id="projects"
+      className="min-h-dvh"
+      data-before-content="projects"
+      finished={false}
+    >
       Projects
     </Section>
   );
