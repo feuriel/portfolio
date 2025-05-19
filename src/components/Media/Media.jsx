@@ -8,9 +8,10 @@ export const Media = ({
   withLinkedin = false,
   withGithub = false,
   withGoogle = false,
+  moreClassName,
 }) => {
   return (
-    <div className="media flex justify-center gap-4">
+    <div className={`${moreClassName} media flex justify-center gap-4`}>
       {withLinkedin && <Linkedin />}
       {withGithub && <Github />}
       {withGoogle && <GMail />}

@@ -10,14 +10,14 @@ export const SphereAnimation = () => {
           id="sphere"
           transform="rotate(135 50 50)"
           strokeWidth="0"
-          stroke="rgba(0,255,120,0.5)"
+          stroke="var(--primary-color)"
           filter="drop-shadow(0 0 1 rgba(255,255,255, 0.8))"
         >
           <ellipse cx="50" cy="3" rx="17" ry="4">
             <animate
               attributeName="stroke-width"
               values="0.1;1;0.1"
-              dur="5s"
+              dur="4s"
               begin="0s"
               repeatCount="indefinite"
               keyTimes="0;0.5;1"

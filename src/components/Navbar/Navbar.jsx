@@ -1,9 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "../Logo/Logo.jsx";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isContactReady = false;
+  let hrefContact = "mailto:gabriel.somogyi.feuga@gmail.com";
+  if (isContactReady) {
+    hrefContact = "#contact";
+  }
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav className="navbar fixed left-0 right-0 m-auto top-0 z-50 w-full max-w-7xl px-4 md:px-24 xl:px-12 py-2 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,7 +41,7 @@ export const Navbar = () => {
           </a>
         </div>
         <div className="justify-self-end">
-          <a className="hover-underline-animation" href="#contact">
+          <a className="hover-underline-animation" href={hrefContact}>
             Contact
           </a>
         </div>
@@ -32,22 +49,44 @@ export const Navbar = () => {
 
       {/* Mobile Layout (hamburger menu) */}
       <div className="md:hidden flex justify-between items-center px-4">
-        <div className="font-bold">
-          <a href="#" className="justify-self-start">
-            <Logo />
-          </a>
-        </div>
+        <a href="#" className="justify-self-start">
+          <Logo />
+        </a>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 focus:outline-none"
+          className="p-2 focus:outline-none transition-all duration-300"
+          aria-label="Menu"
         >
-          {isMenuOpen ? "✕" : "☰"}
+          <div
+            className={`w-6 flex flex-col gap-1 ${
+              isMenuOpen ? "transform rotate-180" : ""
+            }`}
+          >
+            <span
+              className={`h-0.5 bg-current transition-all duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            ></span>
+            <span
+              className={`h-0.5 bg-current transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`h-0.5 bg-current transition-all duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
+            ></span>
+          </div>
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden px-4 py-2 flex flex-col gap-3">
+        <div
+          className="md:hidden px-4 py-2 flex flex-col gap-3 h-[calc(100dvh-54px)] justify-around items-center text-2xl"
+          onClick={() => setIsMenuOpen(false)}
+        >
           <a href="#about" onClick={() => setIsMenuOpen(false)}>
             About
           </a>
@@ -57,7 +96,7 @@ export const Navbar = () => {
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <a href={hrefContact} onClick={() => setIsMenuOpen(false)}>
             Contact
           </a>
         </div>
