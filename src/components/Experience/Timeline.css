@@ -4,6 +4,16 @@
   width: 2px;
   height: var(--timeline-height, 50%);
   background-color: var(--primary-color);
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 0%,
+    var(--primary-color) 40%,
+    var(--primary-color) 50%,
+    var(--primary-color) 60%,
+    var(--primary-color) 85%,
+    white 95%,
+    white 100%
+  );
   top: 0;
   left: 1.25rem;
   margin-left: -1px;
@@ -20,6 +30,10 @@
   opacity: 0;
   animation: timelineItem 1s linear forwards;
   --svg-size: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
 .timeline-item:nth-child(2n) {
