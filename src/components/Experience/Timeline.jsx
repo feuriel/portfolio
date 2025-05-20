@@ -86,7 +86,7 @@ export const Timeline = () => {
       className="timeline relative"
       style={{ "--timeline-height": `0%` }}
     >
-      <TimelineItem amount={0}>
+      <TimelineItem amount={0} y={0}>
         <div className="svg-container bg-[#0d3474]">
           <Booking />
         </div>
