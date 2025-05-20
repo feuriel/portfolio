@@ -1,0 +1,14 @@
+.hero-subtitle {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  animation: heroSubtitle 2s ease-in-out 1.9s forwards;
+}
+
+@keyframes heroSubtitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
