@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { Section } from "../Section/Section";
+import { motion as MOTION } from "framer-motion";
 
 export const About = () => {
   const isContactReady = false;
@@ -17,7 +18,21 @@ export const About = () => {
       <div>
         <img src="https://preetheme.com/html/flowa/assets/img/hero.png" />
       </div>
-      <div className="text-gray-400 flex justify-center flex-col gap-6">
+      <MOTION.div
+        initial={{
+          y: 30,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true, amount: 0.6 }}
+        className="text-gray-400 flex justify-center flex-col gap-6"
+      >
         <h3>Hi there, I'm Gabriel !</h3>
         <p>
           I am a <em>tech lead and team catalyst</em> who wears many hats - and
@@ -58,8 +73,22 @@ export const About = () => {
             See my projects
           </a>
         </div>
-      </div>
-      <div className="text-gray-400 md:col-span-2">
+      </MOTION.div>
+      <MOTION.div
+        initial={{
+          y: 30,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true, amount: 0.6 }}
+        className="text-gray-400 md:col-span-2"
+      >
         <h4 className="pb-4">What drives me:</h4>
         <ul className="pb-4 *:pb-2">
           <li>
@@ -90,7 +119,7 @@ export const About = () => {
             !
           </li>
         </ul>
-      </div>
+      </MOTION.div>
     </Section>
   );
 };

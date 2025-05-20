@@ -4,6 +4,7 @@ import { Booking } from "./Booking";
 import { Match } from "./Match";
 import { BouyguesTelecom } from "./BouyguesTelecom";
 import { DassaultSystemes } from "./DassaultSystemes";
+import { motion as MOTION } from "framer-motion";
 
 const TimelineText = ({ textTitle, textDate, textRole, children }) => {
   return (
@@ -14,6 +15,28 @@ const TimelineText = ({ textTitle, textDate, textRole, children }) => {
       </div>
       {children}
     </div>
+  );
+};
+
+const TimelineItem = ({ children }) => {
+  return (
+    <MOTION.div
+      initial={{
+        y: 50,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.7,
+        },
+      }}
+      viewport={{ once: false, amount: 0.2 }}
+      className="timeline-item"
+    >
+      {children}
+    </MOTION.div>
   );
 };
 
@@ -63,7 +86,7 @@ export const Timeline = () => {
       className="timeline relative"
       style={{ "--timeline-height": `0%` }}
     >
-      <div className="timeline-item">
+      <TimelineItem>
         <div className="svg-container bg-[#0d3474]">
           <Booking />
         </div>
@@ -79,8 +102,8 @@ export const Timeline = () => {
             giving tools for team to personalize the traveler's experience.
           </p>
         </TimelineText>
-      </div>
-      <div className="timeline-item">
+      </TimelineItem>
+      <TimelineItem>
         <div className="svg-container bg-[#1d0e31]">
           <Match />
         </div>
@@ -96,8 +119,8 @@ export const Timeline = () => {
             working environment.
           </p>
         </TimelineText>
-      </div>
-      <div className="timeline-item">
+      </TimelineItem>
+      <TimelineItem>
         <div className="svg-container bg-white">
           <BouyguesTelecom />
         </div>
@@ -113,8 +136,8 @@ export const Timeline = () => {
             tool, I was responsible for the product and its delivery.
           </p>
         </TimelineText>
-      </div>
-      <div className="timeline-item">
+      </TimelineItem>
+      <TimelineItem>
         <div className="svg-container bg-[#095077]">
           <DassaultSystemes />
         </div>
@@ -132,7 +155,7 @@ export const Timeline = () => {
             Dassault Systèmes 3Experience platform.
           </p>
         </TimelineText>
-      </div>
+      </TimelineItem>
     </div>
   );
 };

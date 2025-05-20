@@ -28,7 +28,6 @@
   width: 100%;
   left: 0;
   opacity: 0;
-  animation: timelineItem 1s linear forwards;
   --svg-size: 2.5rem;
 }
 
@@ -58,17 +57,6 @@
   .timeline-item {
     /* lg or tailwind */
     --svg-size: 3.5rem;
-  }
-}
-
-@keyframes timelineItem {
-  0% {
-    opacity: 0;
-    transform: translateY(-2rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
