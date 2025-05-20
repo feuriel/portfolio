@@ -18,7 +18,7 @@ const TimelineText = ({ textTitle, textDate, textRole, children }) => {
   );
 };
 
-const TimelineItem = ({ amount = 0.2, y = 50, children }) => {
+const TimelineItem = ({ amount = 0.2, y = 0, children }) => {
   return (
     <MOTION.div
       initial={{
