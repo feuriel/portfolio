@@ -3,7 +3,7 @@ import React from "react";
 //from https://codepen.io/leimapapa/pen/LEEqJyZ
 export const SphereAnimation = () => {
   return (
-    <div className="top-0 right-[-20%] absolute w-[40%] h-[40%]">
+    <div className="top-0 right-[-20%] absolute w-[40%] h-[40%] z-[-2]">
       <svg viewBox="-5 -5 110 110" strokeWidth="0">
         <g
           fill="none"

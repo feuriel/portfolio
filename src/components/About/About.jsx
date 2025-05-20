@@ -4,11 +4,6 @@ import { Section } from "../Section/Section";
 import { motion as MOTION } from "framer-motion";
 
 export const About = () => {
-  const isContactReady = false;
-  let ref = "mailto:gabriel.somogyi.feuga@gmail.com";
-  if (isContactReady) {
-    ref = "#contact";
-  }
   return (
     <Section
       id="about"
@@ -20,7 +15,7 @@ export const About = () => {
       </div>
       <MOTION.div
         initial={{
-          y: 0,
+          y: 25,
           opacity: 0,
         }}
         whileInView={{
@@ -45,7 +40,7 @@ export const About = () => {
         </p>
         <div className="flex gap-4 justify-center md:justify-start">
           <a
-            href={ref}
+            href={"#contact"}
             className="flex gap-2 px-4 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 
           text-black font-medium rounded-md transition-colors duration-150 pointer"
           >
@@ -76,7 +71,7 @@ export const About = () => {
       </MOTION.div>
       <MOTION.div
         initial={{
-          y: 0,
+          y: 25,
           opacity: 0,
         }}
         whileInView={{

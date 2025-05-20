@@ -4,11 +4,6 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isContactReady = false;
-  let hrefContact = "mailto:gabriel.somogyi.feuga@gmail.com";
-  if (isContactReady) {
-    hrefContact = "#contact";
-  }
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -41,7 +36,7 @@ export const Navbar = () => {
           </a>
         </div>
         <div className="justify-self-end">
-          <a className="hover-underline-animation" href={hrefContact}>
+          <a className="hover-underline-animation" href="#contact">
             Contact
           </a>
         </div>
@@ -96,7 +91,7 @@ export const Navbar = () => {
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
-          <a href={hrefContact} onClick={() => setIsMenuOpen(false)}>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact
           </a>
         </div>

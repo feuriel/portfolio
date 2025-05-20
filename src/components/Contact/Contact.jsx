@@ -1,8 +1,8 @@
 import React from "react";
 import { Section } from "../Section/Section";
 import { SphereAnimation } from "./SphereAnimation";
-import { ContactForm } from "./ContactForm";
 import { ContactSide } from "./ContactSide";
+import { FAQ } from "./FAQ";
 import "./Contact.css";
 
 export const Contact = () => {
@@ -11,13 +11,15 @@ export const Contact = () => {
     <Section
       id="contact"
       data-before-content="contact"
-      className="relative min-h-[85dvh] hidden"
-      finished={false}
-      data-finished="false"
+      className="relative min-h-[85dvh]"
+      finished={true}
     >
       <SphereAnimation />
-      <ContactSide className="col-span-12 xl:col-start-2 " />
-      <ContactForm className="col-span-12 xl:col-start-2 " />
+      <div className="xl:px-[6rem]">
+        <ContactSide className="col-span-12 xl:col-start-2 py-[2rem]" />
+        {/* <ContactForm className="col-span-12 xl:col-start-2 " /> */}
+        <FAQ />
+      </div>
     </Section>
   );
 };

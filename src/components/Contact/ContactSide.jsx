@@ -7,8 +7,7 @@ export const ContactSide = ({ className }) => {
       <h3>Let's connect !</h3>
       <p>
         Feel free to reach out to me directly via email at
-        gabriel.somogyi.feuga@gmail.com, or simply fill out the form here
-        <span> below.</span>
+        gabriel.somogyi.feuga@gmail.com
       </p>
       <p>You can also reach on my social network.</p>
       <Media
