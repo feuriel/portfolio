@@ -18,11 +18,11 @@ const TimelineText = ({ textTitle, textDate, textRole, children }) => {
   );
 };
 
-const TimelineItem = ({ children }) => {
+const TimelineItem = ({ amount = 0.2, y = 50, children }) => {
   return (
     <MOTION.div
       initial={{
-        y: 50,
+        y: y,
         opacity: 0,
       }}
       whileInView={{
@@ -32,7 +32,7 @@ const TimelineItem = ({ children }) => {
           duration: 0.7,
         },
       }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: amount }}
       className="timeline-item"
     >
       {children}
@@ -86,7 +86,7 @@ export const Timeline = () => {
       className="timeline relative"
       style={{ "--timeline-height": `0%` }}
     >
-      <TimelineItem>
+      <TimelineItem amount={0} y={0}>
         <div className="svg-container bg-[#0d3474]">
           <Booking />
         </div>
