@@ -20,7 +20,7 @@ export const About = () => {
       </div>
       <MOTION.div
         initial={{
-          y: 30,
+          y: 0,
           opacity: 0,
         }}
         whileInView={{
@@ -76,7 +76,7 @@ export const About = () => {
       </MOTION.div>
       <MOTION.div
         initial={{
-          y: 30,
+          y: 0,
           opacity: 0,
         }}
         whileInView={{
