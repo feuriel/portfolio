@@ -18,7 +18,7 @@ const TimelineText = ({ textTitle, textDate, textRole, children }) => {
   );
 };
 
-const TimelineItem = ({ amount = 0.3, y = 0, children }) => {
+const TimelineItem = ({ amount = 0.25, y = 15, children }) => {
   return (
     <MOTION.div
       initial={{
@@ -32,7 +32,7 @@ const TimelineItem = ({ amount = 0.3, y = 0, children }) => {
           duration: 0.7,
         },
       }}
-      viewport={{ once: false, amount: amount }}
+      viewport={{ once: true, amount: amount }}
       className="timeline-item"
     >
       {children}

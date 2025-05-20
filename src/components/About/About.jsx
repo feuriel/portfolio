@@ -30,7 +30,7 @@ export const About = () => {
             duration: 1,
           },
         }}
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="text-gray-400 flex justify-center flex-col gap-6"
       >
         <h3>Hi there, I'm Gabriel !</h3>
@@ -86,7 +86,7 @@ export const About = () => {
             duration: 1,
           },
         }}
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="text-gray-400 md:col-span-2"
       >
         <h4 className="pb-4">What drives me:</h4>
