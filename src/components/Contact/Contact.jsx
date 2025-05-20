@@ -14,7 +14,7 @@ export const Contact = () => {
       className="relative min-h-[85dvh]"
       finished={true}
     >
-      <SphereAnimation />
+      {/* <SphereAnimation /> */}
       <div className="xl:px-[6rem]">
         <ContactSide className="col-span-12 xl:col-start-2 py-[2rem]" />
         {/* <ContactForm className="col-span-12 xl:col-start-2 " /> */}
