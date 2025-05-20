@@ -10,6 +10,7 @@
   letter-spacing: 0.3rem;
   color: transparent;
   font-family: "Bebas Neue", sans-serif;
+  transition: transform 300ms ease;
   transform: rotateZ(var(--rotateZ, 0deg));
   font-size: var(--size-font-before, 8rem);
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.87); /* For Safari/Chrome */

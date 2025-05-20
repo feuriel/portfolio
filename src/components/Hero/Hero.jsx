@@ -2,6 +2,7 @@ import React from "react";
 import { Apparition } from "./Apparition.jsx";
 import { Section } from "../Section/Section.jsx";
 import { LightAnimation } from "./LightAnimation.jsx";
+import "./Hero.css";
 
 export const Hero = () => {
   return (
@@ -33,7 +34,7 @@ export const Hero = () => {
               className="text-5xl"
             />
           </h2>
-          <h3 className="text-lg font-normal">
+          <h3 className="hero-subtitle text-lg font-normal">
             From leading global tech teams to crafting
             <span title="clean, robust, and adaptable">
               {" "}

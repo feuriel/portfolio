@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LightAnimation = ({ initialDelay = 4.5 }) => {
+export const LightAnimation = ({ initialDelay = 4.3 }) => {
   // Convert seconds to SVG time format (e.g., 1.5 => "1.5s")
   const delay = (seconds) => `${seconds}s`;
 
