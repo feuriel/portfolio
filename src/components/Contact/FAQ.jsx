@@ -3,10 +3,10 @@ import React from "react";
 const FAQSection = ({ title, description }) => {
   return (
     <details
-      class="group py-4 [&_summary::-webkit-details-marker]:hidden"
+      className="group py-4 [&_summary::-webkit-details-marker]:hidden"
       closed
     >
-      <summary class="flex items-center justify-between gap-1.5">
+      <summary className="flex items-center justify-between gap-1.5">
         <h2 class="text-lg font-medium">{title}</h2>
         <svg
           className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180 hover:cursor-pointer"
@@ -16,15 +16,15 @@ const FAQSection = ({ title, description }) => {
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M19 9l-7 7-7-7"
           />
         </svg>
       </summary>
 
-      <p class="pt-4">{description}</p>
+      <p className="pt-4">{description}</p>
     </details>
   );
 };
@@ -50,7 +50,7 @@ export const FAQ = () => {
               "React, Vue, Svelte… Which JS framework do you actually like ?"
             }
             description={
-              "I flirt with them all, but my heart still belongs to Vanilla javascript. Call me old-school, but I like knowing how my tools work, not just how to assemble IKEA instructions. Frameworks come and go, but mastery of the foundations stay the same. "
+              "I flirt with them all, but my heart still go towards Vanilla js. Call me old-school, but I like knowing how my tools work, not just how to assemble IKEA instructions. "
             }
           />
           <FAQSection
@@ -65,10 +65,10 @@ export const FAQ = () => {
           />
           <FAQSection
             title={
-              "Everyone's chasing 'cutting-edge' solutions—what's your take ?"
+              "Everyone's chasing 'cutting-edge' solutions, what's your take ?"
             }
             description={
-              "Simplicity is the new complexity. I appreciate systems that work so simply they seem lazy."
+              "Simplicity is the new complexity. I appreciate systems that are so simple that they just seem lazy."
             }
           />
         </div>
