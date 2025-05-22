@@ -28,7 +28,7 @@ export const Navbar = () => {
           <a className="hover-underline-animation" href="#about">
             About
           </a>
-          <a className="hover-underline-animation" href="#experiences">
+          <a className="hover-underline-animation" href="#journey">
             Journey
           </a>
           <a className="hover-underline-animation" href="#projects">
@@ -85,7 +85,7 @@ export const Navbar = () => {
           <a href="#about" onClick={() => setIsMenuOpen(false)}>
             About
           </a>
-          <a href="#experiences" onClick={() => setIsMenuOpen(false)}>
+          <a href="#journey" onClick={() => setIsMenuOpen(false)}>
             Journey
           </a>
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>

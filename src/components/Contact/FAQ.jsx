@@ -7,7 +7,7 @@ const FAQSection = ({ title, description }) => {
       closed
     >
       <summary className="flex items-center justify-between gap-1.5">
-        <h2 class="text-lg font-medium">{title}</h2>
+        <h2 className="text-lg font-medium">{title}</h2>
         <svg
           className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180 hover:cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +33,8 @@ export const FAQ = () => {
   return (
     <div>
       <h3>Want to know even more ?</h3>
-      <div class="flow-root">
-        <div class="my-4 flex flex-col divide-y divide-gray-700">
+      <div className="flow-root">
+        <div className="my-4 flex flex-col divide-y divide-gray-700">
           <FAQSection
             title={
               "How do you inspire teams ? Motivational posters ? Free snacks?"

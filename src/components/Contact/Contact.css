@@ -1,5 +1,4 @@
-@media (width >= 80rem) {
-  /* lg or tailwind */
+@media (width > theme("screens.xl")) {
   #contact::before {
     --left: -13.5rem;
     --top: 15.5rem;

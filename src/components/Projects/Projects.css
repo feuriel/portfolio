@@ -1,5 +1,4 @@
-@media (width >= 80rem) {
-  /* lg or tailwind */
+@media (width > theme("screens.xl")) {
   #projects::before {
     --left: -15.5rem;
     --top: 18rem;

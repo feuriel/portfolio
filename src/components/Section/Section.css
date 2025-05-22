@@ -24,8 +24,7 @@
   }
 }
 
-@media (width >= 80rem) {
-  /* lg or tailwind */
+@media (width > theme("screens.xl")) {
   .section::before {
     --size-font-before: 15rem;
     --rotateZ: -90deg;

@@ -55,7 +55,6 @@
 
 @media (width > theme("screens.xl")) {
   .timeline-item {
-    /* lg or tailwind */
     --svg-size: 3.5rem;
   }
 }
