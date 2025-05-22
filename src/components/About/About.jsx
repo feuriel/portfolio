@@ -9,6 +9,7 @@ export const About = () => {
       id="about"
       className={`about min-h-dvh grid gap-4 grid-cols-1 md:grid-cols-2 `}
       data-before-content={"about"}
+      as="main"
     >
       <div>
         <img src="https://preetheme.com/html/flowa/assets/img/hero.png" />
