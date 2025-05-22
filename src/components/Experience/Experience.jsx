@@ -6,7 +6,7 @@ import { Timeline } from "./Timeline";
 export const Experience = () => {
   return (
     <Section
-      id="experiences"
+      id="journey"
       className="min-h-dvh"
       data-before-content="journey"
       finished={true}
