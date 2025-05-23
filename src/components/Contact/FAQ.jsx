@@ -2,10 +2,7 @@ import React from "react";
 
 const FAQSection = ({ title, description }) => {
   return (
-    <details
-      className="group py-4 [&_summary::-webkit-details-marker]:hidden"
-      closed
-    >
+    <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
       <summary className="flex items-center justify-between gap-1.5">
         <h2 className="text-lg font-medium">{title}</h2>
         <svg

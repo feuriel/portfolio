@@ -12,7 +12,6 @@ export const Hero = () => {
     >
       <LightAnimation />
       <Section className="flex justify-center items-center min-h-[85dvh]">
-        <div></div>
         <div className="flex flex-col justify-center items-center  px-6">
           <Apparition
             text="GABRIEL SOMOGYI"

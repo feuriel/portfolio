@@ -14,6 +14,12 @@
     @apply text-2xl md:text-4xl font-bold;
   }
 }
+/* https://www.youtube.com/watch?v=4jB8bKto1BM&ab_channel=KevinPowell */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
 
 :root {
   --primary-color: oklch(0.73 0.1603 155.65);
