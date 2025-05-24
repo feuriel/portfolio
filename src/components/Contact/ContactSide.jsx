@@ -6,8 +6,10 @@ export const ContactSide = ({ className }) => {
     <div className={`flex flex-col gap-6 ${className}`}>
       <h3>Let's connect !</h3>
       <p>
-        Feel free to reach out to me directly via email at
-        gabriel.somogyi.feuga@gmail.com
+        Feel free to reach out to me directly via email at{" "}
+        <a href="mailto:gabriel.somogyi.feuga@gmail.com">
+          gabriel.somogyi.feuga@gmail.com
+        </a>
       </p>
       <p>You can also reach on my social network.</p>
       <Media

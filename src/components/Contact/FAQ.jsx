@@ -4,7 +4,7 @@ const FAQSection = ({ title, description }) => {
   return (
     <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
       <summary className="flex items-center justify-between gap-1.5">
-        <h2 className="text-lg font-medium">{title}</h2>
+        <h2>{title}</h2>
         <svg
           className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180 hover:cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const FAQSection = ({ title, description }) => {
         </svg>
       </summary>
 
-      <p className="pt-4">{description}</p>
+      <p className="pt-4 italic">{description}</p>
     </details>
   );
 };
