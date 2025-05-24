@@ -62,7 +62,7 @@ export const FAQ = () => {
           />
           <FAQSection
             title={
-              "Everyone's chasing 'cutting-edge' solutions, what's your take ?"
+              "Everyone's chasing cutting-edge solutions, what's your take ?"
             }
             description={
               "Simplicity is the new complexity. I appreciate systems that are so simple that they just seem lazy."
