@@ -10,7 +10,7 @@ export const Section = ({
   finished = true,
   ...restProps
 }) => {
-  const totalClassNames = `relative section overflow-visible m-auto w-full max-w-7xl pt-20 px-4 md:px-24 xl:px-12 ${className}`;
+  const totalClassNames = `relative section overflow-visible m-auto w-full max-w-7xl pt-20 px-4 md:px-24 xl:px-12 bg-[var(--base-bg-color-transparent)] ${className}`;
   if (!finished) {
     return (
       <Tag id={id} className={totalClassNames} {...restProps}>

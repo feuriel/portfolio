@@ -8,7 +8,7 @@ import { motion as MOTION } from "framer-motion";
 
 const TimelineText = ({ textTitle, textDate, textRole, children }) => {
   return (
-    <div className="p-[1rem] relative rounded-sm bg-[#121212C5]">
+    <div className="p-[1rem] relative rounded-sm">
       <h3 className="mt-[0.5rem] text-2xl pb-4">{textTitle}</h3>
       <div className="text-sm pb-4">
         {textDate} <span className="italic"> - {textRole}</span>

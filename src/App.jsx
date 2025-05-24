@@ -12,7 +12,6 @@ import { Footer } from "./components/Footer/Footer.jsx";
 function App() {
   return (
     <>
-      <PreLoader />
       <Navbar />
       <Hero />
       <SectionDivider />
@@ -24,6 +23,7 @@ function App() {
       <SectionDivider />
       <Contact />
       <Footer />
+      <PreLoader />
     </>
   );
 }

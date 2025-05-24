@@ -3,9 +3,9 @@
 }
 
 .github-icon:hover path.github-in {
-  fill: #121212;
+  fill: var(--base-bg-color);
 }
 
 .github-icon:hover path.github-bg {
-  fill: #ffffff;
+  fill: var(--text-color);
 }

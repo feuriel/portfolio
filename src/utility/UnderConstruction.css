@@ -10,7 +10,7 @@
   );
   transform: rotate(var(--angle, 45deg));
   transform-origin: 0 0;
-  border: 2px solid white;
+  border: 2px solid var(--text-color);
   box-sizing: border-box;
 }
 
@@ -19,5 +19,4 @@
   position: absolute;
   top: -2rem;
   left: 3rem;
-  color: white;
 }

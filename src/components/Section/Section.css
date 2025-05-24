@@ -13,7 +13,7 @@
   transition: transform 300ms ease;
   transform: rotateZ(var(--rotateZ, 0deg));
   font-size: var(--size-font-before, 8rem);
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.87); /* For Safari/Chrome */
+  -webkit-text-stroke: 1px var(--text-color); /* For Safari/Chrome */
   text-stroke: 1px rgba(255, 255, 255, 0.87); /* Standard property */
 }
 

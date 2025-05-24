@@ -3,7 +3,7 @@ import "./Logo.css";
 
 export const Logo = ({
   size = "54", // Default size (matches original)
-  color = "#ffffff", // Default color
+  color = "var(--text-color)", // Default color
   className = "logo",
 }) => {
   return (

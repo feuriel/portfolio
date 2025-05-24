@@ -14,3 +14,13 @@
 .about h3 {
   color: var(--text-color);
 }
+
+.secondary-button {
+  --background-color: oklch(92.2% 0 0); /* neutral-200 */
+  --background-color-hover: oklch(87% 0 0); /* neutral-300 */
+}
+
+.dark .secondary-button {
+  --background-color: transparent;
+  --background-color-hover: oklch(26.9% 0 0); /* neutral-800 */
+}

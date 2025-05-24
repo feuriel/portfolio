@@ -63,8 +63,7 @@ export const About = () => {
           </a>
           <a
             href="#projects"
-            className="px-4 py-3 bg-neutral-800 hover:bg-neutral-900 
-           font-medium rounded-md transition-colors duration-150 pointer text-[color:var(--text-color)]"
+            className="px-4 py-3 secondary-button font-medium rounded-md transition-colors duration-150 pointer bg-[var(--background-color)] hover:bg-[var(--background-color-hover)] text-[color:var(--text-color)]"
           >
             See my projects
           </a>

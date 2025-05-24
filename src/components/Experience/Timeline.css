@@ -11,8 +11,8 @@
     var(--primary-color) 50%,
     var(--primary-color) 60%,
     var(--primary-color) 85%,
-    white 95%,
-    white 100%
+    var(--text-color) 95%,
+    var(--text-color) 100%
   );
   top: 0;
   left: 1.25rem;

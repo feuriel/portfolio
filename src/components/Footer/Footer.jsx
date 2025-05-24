@@ -2,6 +2,7 @@ import React from "react";
 import { Media } from "../Media/Media.jsx";
 import { Logo } from "../Logo/Logo.jsx";
 import { Section } from "../Section/Section.jsx";
+import { DarkLightToggle } from "../DarkLightToggle/DarkLightToggle.jsx";
 
 export const Footer = () => {
   return (
@@ -21,6 +22,9 @@ export const Footer = () => {
       </div>
       <div className="justify-self-end md:justify-self-center">
         <Media withGithub={true} withGoogle={true} withLinkedin={true} />
+      </div>
+      <div className="justify-self-end col-span-2 md:col-span-1">
+        <DarkLightToggle />
       </div>
     </Section>
   );
