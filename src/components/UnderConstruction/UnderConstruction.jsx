@@ -7,7 +7,7 @@ const useDiagonalAngle = (ref) => {
 
   useEffect(() => {
     const updateAngle = () => {
-      if (ref && ref.current && ref.current) {
+      if (ref && ref.current) {
         const width = ref.current.offsetWidth;
         const height = ref.current.offsetHeight;
         const angleRad = Math.atan2(height, width);
@@ -30,12 +30,17 @@ const useDiagonalAngle = (ref) => {
   return { angle, length };
 };
 
-export const UnderConstruction = (doubled = false) => {
+export const UnderConstruction = ({
+  doubled = true,
+  text = "UNDER CONSTRUCTION",
+}) => {
   const containerRef = useRef(null);
+  console.log("here");
   const { angle, length } = useDiagonalAngle(containerRef);
   return (
     <div ref={containerRef} className="relative w-full h-dvh overflow-hidden">
       <div
+        data-text-under-construction={text}
         className="police-line flex justify-start"
         style={{
           "--angle": `${angle}deg`,
@@ -45,6 +50,7 @@ export const UnderConstruction = (doubled = false) => {
       ></div>
       {doubled && (
         <div
+          data-text-under-construction={text}
           className="police-line flex justify-start"
           style={{
             "--angle": `-${angle}deg`,

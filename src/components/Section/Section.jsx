@@ -1,6 +1,6 @@
 import React from "react";
 import "./Section.css";
-import { UnderConstruction } from "../../utility/UnderConstruction";
+import { UnderConstruction } from "../UnderConstruction/UnderConstruction";
 
 export const Section = ({
   id,
@@ -14,7 +14,7 @@ export const Section = ({
   if (!finished) {
     return (
       <Tag id={id} className={totalClassNames} {...restProps}>
-        <UnderConstruction />
+        <UnderConstruction text="COMING SOON" />
       </Tag>
     );
   }

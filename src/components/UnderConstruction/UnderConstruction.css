@@ -10,12 +10,12 @@
   );
   transform: rotate(var(--angle, 45deg));
   transform-origin: 0 0;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--text-color, white);
   box-sizing: border-box;
 }
 
 .police-line::before {
-  content: "UNDER CONSTRUCTION";
+  content: attr(data-text-under-construction);
   position: absolute;
   top: -2rem;
   left: 3rem;
