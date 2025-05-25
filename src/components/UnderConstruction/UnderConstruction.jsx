@@ -40,7 +40,7 @@ export const UnderConstruction = ({
   return (
     <div ref={containerRef} className="relative w-full h-dvh overflow-hidden">
       <div
-        data-text-under-construction={text}
+        data-text={text}
         className="police-line flex justify-start"
         style={{
           "--angle": `${angle}deg`,
@@ -50,7 +50,7 @@ export const UnderConstruction = ({
       ></div>
       {doubled && (
         <div
-          data-text-under-construction={text}
+          data-text={text}
           className="police-line flex justify-start"
           style={{
             "--angle": `-${angle}deg`,

@@ -15,7 +15,7 @@
 }
 
 .police-line::before {
-  content: attr(data-text-under-construction);
+  content: attr(data-text);
   position: absolute;
   top: -2rem;
   left: 3rem;
