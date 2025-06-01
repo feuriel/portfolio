@@ -8,10 +8,11 @@ export const ProjectDetails = ({
 }) => {
   return (
     <div>
-      <h3 className="text-5xl ">{title}</h3>
-      <div className="text-sm">
-        {year} - <span className="italic">{role}</span>
-      </div>
+      <h3 className="font-['Bebas_Neue'] text-5xl tracking-wider pb-4">
+        {title}
+      </h3>
+      <div className="text-sm  pb-4">{year}</div>
+      <div className="text-sm  pb-4">Role: {role}</div>
       {/* {children} */}
     </div>
   );
