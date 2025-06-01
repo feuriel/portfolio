@@ -13,7 +13,9 @@ export const Projects = () => {
       data-before-content="projects"
       finished={true}
     >
-      <h3 className="mt-[-2rem] mb-[2rem] md:hidden">Selected projects :</h3>
+      <h3 className="mt-[-2rem] pt-[2rem] mb-[2rem] md:hidden">
+        Selected projects :
+      </h3>
       <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 grid-rows-[minmax(200px,1fr)]">
         <div className="row-start-1 col-start-1 hidden sm:block">
           <ProjectDetails
