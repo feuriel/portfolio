@@ -34,7 +34,7 @@ export const FAQ = () => {
         <div className="my-4 flex flex-col divide-y divide-gray-700">
           <FAQSection
             title={
-              "How do you inspire teams ? Motivational posters ? Free snacks?"
+              "How do you inspire teams ? Motivational posters ? Free snacks ?"
             }
             description={`Yes to snacks. But mostly by turning problems into puzzles - because who doesn't love a good challenge ?`}
           />
