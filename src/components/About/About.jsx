@@ -84,7 +84,7 @@ export const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="text-gray-400 md:col-span-2"
       >
-        <h4 className="pb-4">What drives me:</h4>
+        <h4 className="pb-4">What drives me :</h4>
         <ul className="pb-4 *:pb-2">
           <li>
             <em>People-first</em> - Cultivating teams where engineers thrive,
@@ -99,7 +99,7 @@ export const About = () => {
             products and teams
           </li>
         </ul>
-        <h4 className="pb-4">Beyond work, you can find me:</h4>
+        <h4 className="pb-4">Beyond work, you can find me :</h4>
         <ul className="pb-6 *:pb-2">
           <li>
             <em>Tinkering with side projects</em> - From AI experiments to
