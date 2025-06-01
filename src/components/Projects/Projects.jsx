@@ -11,7 +11,7 @@ export const Projects = () => {
       id="projects"
       className="min-h-dvh md:pt-35 lg:pt-36 xl:pl-[7rem]"
       data-before-content="projects"
-      finished={false}
+      finished={true}
     >
       <h3 className="mt-[-2rem] mb-[2rem] md:hidden">Selected projects :</h3>
       <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 grid-rows-[minmax(200px,1fr)]">
