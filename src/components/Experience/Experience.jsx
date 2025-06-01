@@ -11,7 +11,7 @@ export const Experience = () => {
       data-before-content="journey"
       finished={true}
     >
-      <h3 className="mt-[-2rem] mb-[2rem] md:hidden">My journey so far:</h3>
+      <h3 className="mt-[-2rem] mb-[2rem] md:hidden">My journey so far :</h3>
       <Timeline />
     </Section>
   );
