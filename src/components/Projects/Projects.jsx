@@ -16,7 +16,7 @@ export const Projects = () => {
       <h3 className="mt-[-2rem] pt-[2rem] mb-[2rem] md:hidden">
         Selected projects :
       </h3>
-      <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 grid-rows-[minmax(200px,1fr)]">
+      <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-y-10 gap-x-4 ">
         <div className="row-start-1 col-start-1 hidden sm:block">
           <ProjectDetails
             title="CXC"
@@ -29,7 +29,7 @@ export const Projects = () => {
             </p>
           </ProjectDetails>
         </div>
-        <div className="row-start-1 col-start-2 xl:ml-[-1rem] lg:ps-[1rem]">
+        <div className="row-start-1 col-start-2 xl:mr-[-4rem]">
           <ProjectIllustration i={0} />
         </div>
         <div className="row-start-2 col-start-2 hidden sm:block">
@@ -49,7 +49,7 @@ export const Projects = () => {
             year="2016"
           ></ProjectDetails>
         </div>
-        <div className="row-start-3 col-start-2">
+        <div className="row-start-3 col-start-2 xl:ml-[-3rem]">
           <ProjectIllustration i={2} />
         </div>
         <div className="row-start-4 col-start-2 hidden sm:block">
