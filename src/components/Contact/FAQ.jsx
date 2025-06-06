@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimatedDiv } from "../../utility/AnimatedDiv.jsx";
 
 const FAQSection = ({ title, description }) => {
   return (
@@ -28,7 +29,7 @@ const FAQSection = ({ title, description }) => {
 
 export const FAQ = () => {
   return (
-    <div>
+    <AnimatedDiv>
       <h3>Want to know even more ?</h3>
       <div className="flow-root">
         <div className="my-4 flex flex-col divide-y divide-gray-700">
@@ -70,6 +71,6 @@ export const FAQ = () => {
           />
         </div>
       </div>
-    </div>
+    </AnimatedDiv>
   );
 };

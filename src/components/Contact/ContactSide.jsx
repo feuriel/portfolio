@@ -1,9 +1,10 @@
 import React from "react";
 import { Media } from "../Media/Media.jsx";
+import { AnimatedDiv } from "../../utility/AnimatedDiv.jsx";
 
 export const ContactSide = ({ className }) => {
   return (
-    <div className={`flex flex-col gap-6 ${className}`}>
+    <AnimatedDiv className={`flex flex-col gap-6 ${className}`}>
       <h3>Let's connect !</h3>
       <p>
         Feel free to reach out to me directly via email at{" "}
@@ -17,6 +18,6 @@ export const ContactSide = ({ className }) => {
         withGithub={true}
         moreClassName={"justify-start"}
       />
-    </div>
+    </AnimatedDiv>
   );
 };
