@@ -23,4 +23,5 @@
 .project-illustration img {
   transform: scale(1);
   transition: transform 200ms ease-in-out;
+  max-height: 400px;
 }
