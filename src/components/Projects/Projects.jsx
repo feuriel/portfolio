@@ -3,6 +3,7 @@ import { Section } from "../Section/Section";
 import "./Projects.css";
 import { ProjectIllustration } from "./ProjectIllustration";
 import { ProjectDetails } from "./ProjectDetails";
+import { AnimatedDiv } from "../../utility/AnimatedDiv";
 
 export const Projects = () => {
   let [isUnlocked, setIsUnlocked] = useState(false);
@@ -17,7 +18,7 @@ export const Projects = () => {
         Selected projects :
       </h3>
       <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-y-10 gap-x-4 ">
-        <div className="row-start-1 col-start-1 hidden sm:block">
+        <AnimatedDiv className="toto row-start-1 col-start-1 hidden sm:block">
           <ProjectDetails
             title="CXC"
             role="Manager, UX/UI Design, Development"
@@ -28,75 +29,77 @@ export const Projects = () => {
               blablabla
             </p>
           </ProjectDetails>
-        </div>
-        <div className="row-start-1 col-start-2 xl:mr-[-4rem]">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-1 col-start-2 xl:mr-[-4rem]">
           <ProjectIllustration i={0} />
-        </div>
-        <div className="row-start-2 col-start-2 hidden sm:block">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-2 col-start-2 hidden sm:block">
           <ProjectDetails
             title="Circles of Lines"
             role="Development"
             year="2025"
           ></ProjectDetails>
-        </div>
-        <div className="sm:row-start-2 sm:col-start-1">
+        </AnimatedDiv>
+        <AnimatedDiv className="sm:row-start-2 sm:col-start-1">
           <ProjectIllustration i={1} />
-        </div>
-        <div className="row-start-3 col-start-1 xl:col-start-3 hidden sm:block">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-3 col-start-1 xl:col-start-3 hidden sm:block">
           <ProjectDetails
             title="Chateau de Morin"
             role="Development"
             year="2016"
           ></ProjectDetails>
-        </div>
-        <div className="row-start-3 col-start-2 xl:ml-[-3rem]">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-3 col-start-2 xl:ml-[-3rem]">
           <ProjectIllustration i={2} />
-        </div>
-        <div className="row-start-4 col-start-2 hidden sm:block">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-4 col-start-2 hidden sm:block">
           <ProjectDetails
             title="Coming Soon"
             role="Development"
             year="2025"
           ></ProjectDetails>
-        </div>
-        <div className="row-start-4 col-start-1 xl:col-start-3">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-4 col-start-1 xl:col-start-3">
           <ProjectIllustration i={3} />
-        </div>
-        <div className="row-start-5 col-start-1 hidden sm:block">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-5 col-start-1 hidden sm:block">
           <ProjectDetails
             title="Math is Art"
             role="Development"
             year="2025"
           ></ProjectDetails>
-        </div>
-        <div className="row-start-5 col-start-2">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-5 col-start-2">
           <ProjectIllustration i={4} />
-        </div>
-        <div className="row-start-6 col-start-2 hidden sm:block">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-6 col-start-2 hidden sm:block">
           <ProjectDetails
             title="Hawaya"
             role="Direction of Engineering"
             year="2021-2022 @MatchGroup"
           ></ProjectDetails>
-        </div>
-        <div className="row-start-6 col-start-1">
+        </AnimatedDiv>
+        <AnimatedDiv className="row-start-6 col-start-1">
           <ProjectIllustration i={5} />
-        </div>
+        </AnimatedDiv>
       </div>
-      <div className="text-sm pb-[1rem]">And some [fun] projects... 💡</div>
+      <AnimatedDiv className="text-sm pb-[1rem]">
+        And some [fun] projects... 💡
+      </AnimatedDiv>
       <div className="text-sm grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
         {/* <RandomProject name="Memo-riel" icon="🔒" /> */}
-        <div>🔒 Memo-riel</div>
-        <div>🔒 CSS Anims</div>
-        <div>🔒 CSS Clock</div>
-        <div>🔒 Pixel Art MonaLisa</div>
-        <div>🔒 Phaser Star</div>
-        <div>🔒 Outer Circle</div>
-        <div>🔒 Bulbhead</div>
-        <div>🔒 Landing Page</div>
-        <div>🔒 Loadinmage</div>
-        <div>🔒 Locked</div>
-        <div>🔒 Inner Circle</div>
+        <AnimatedDiv>🔒 Memo-riel</AnimatedDiv>
+        <AnimatedDiv>🔒 CSS Anims</AnimatedDiv>
+        <AnimatedDiv>🔒 CSS Clock</AnimatedDiv>
+        <AnimatedDiv>🔒 Pixel Art MonaLisa</AnimatedDiv>
+        <AnimatedDiv>🔒 Phaser Star</AnimatedDiv>
+        <AnimatedDiv>🔒 Outer Circle</AnimatedDiv>
+        <AnimatedDiv>🔒 Bulbhead</AnimatedDiv>
+        <AnimatedDiv>🔒 Landing Page</AnimatedDiv>
+        <AnimatedDiv>🔒 Loadinmage</AnimatedDiv>
+        <AnimatedDiv>🔒 Locked</AnimatedDiv>
+        <AnimatedDiv>🔒 Inner Circle</AnimatedDiv>
       </div>
     </Section>
   );

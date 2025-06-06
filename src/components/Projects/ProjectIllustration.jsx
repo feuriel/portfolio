@@ -26,7 +26,7 @@ export const ProjectIllustration = ({ i = 0 }) => {
         src={imageSrc}
         alt={`Project ${i} illustration`}
         className="w-full h-auto object-cover"
-        loading="lazy"
+        //        loading="lazy"
         decoding="async"
       />
     </div>
