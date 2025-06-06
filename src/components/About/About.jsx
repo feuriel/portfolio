@@ -2,6 +2,9 @@ import React from "react";
 import "./About.css";
 import { Section } from "../Section/Section";
 import { motion as MOTION } from "framer-motion";
+import meImage from "./me-min.webp";
+import capImage from "./cap.png";
+import hatImage from "./hat.png";
 
 export const About = () => {
   return (
@@ -11,8 +14,14 @@ export const About = () => {
       data-before-content={"about"}
       as="main"
     >
-      <div>
-        <img src="https://preetheme.com/html/flowa/assets/img/hero.png" />
+      <div className="relative flex justify-center items-center">
+        <img src={meImage} alt="Gabriel's picture, juggling with hats" />
+        <div className="hidden absolute top-0 right-0 scale-40">
+          <img src={capImage} alt="Gabriel's cap" />
+        </div>
+        <div className="hidden absolute top-0 right-0 scale-40">
+          <img src={hatImage} alt="Gabriel's hat" />
+        </div>
       </div>
       <MOTION.div
         initial={{

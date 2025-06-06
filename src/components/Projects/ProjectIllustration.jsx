@@ -7,12 +7,12 @@ export const ProjectIllustration = ({ i = 0 }) => {
   React.useEffect(() => {
     // Static import map for known images
     const images = {
-      0: import("./assets/project0-lg.jpg"),
-      1: import("./assets/project1-lg.png"),
-      2: import("./assets/project2-lg.jpg"),
-      3: import("./assets/project3-lg.png"),
-      4: import("./assets/project4-lg.png"),
-      5: import("./assets/project5-lg.png"),
+      0: import("./assets/project0-lg.webp"),
+      1: import("./assets/project1-lg.webp"),
+      2: import("./assets/project2-lg.webp"),
+      3: import("./assets/project3-lg.webp"),
+      4: import("./assets/project4-lg.webp"),
+      5: import("./assets/project5-lg.webp"),
     };
 
     if (images[i]) {
