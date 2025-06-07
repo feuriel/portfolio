@@ -4,6 +4,30 @@ import "./Projects.css";
 import { ProjectIllustration } from "./ProjectIllustration";
 import { ProjectDetails } from "./ProjectDetails";
 import { AnimatedDiv } from "../../utility/AnimatedDiv";
+import Project0 from "./data/0.json";
+import Project1 from "./data/1.json";
+import Project2 from "./data/2.json";
+import Project3 from "./data/3.json";
+import Project4 from "./data/4.json";
+import Project5 from "./data/5.json";
+
+const ProjectRow = ({ class1, class2, project }) => {
+  return (
+    <>
+      <AnimatedDiv className={class1}>
+        <ProjectDetails
+          title={project.title}
+          role={project.role}
+          year={project.year}
+          i={project.id}
+        ></ProjectDetails>
+      </AnimatedDiv>
+      <AnimatedDiv className={class2}>
+        <ProjectIllustration i={project.id} />
+      </AnimatedDiv>
+    </>
+  );
+};
 
 export const Projects = () => {
   let [isUnlocked, setIsUnlocked] = useState(false);
@@ -18,71 +42,36 @@ export const Projects = () => {
         Selected projects :
       </h3>
       <div className="pb-[2rem] flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-y-10 gap-x-4 ">
-        <AnimatedDiv className="toto row-start-1 col-start-1 hidden sm:block">
-          <ProjectDetails
-            title="CXC"
-            role="Manager, UX/UI Design, Development"
-            year="2024-2025 @Booking.com"
-          >
-            <p>
-              Customer eXperience Catalog is the tool used by Booking.com to
-              blablabla
-            </p>
-          </ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-1 col-start-2 xl:mr-[-4rem]">
-          <ProjectIllustration i={0} />
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-2 col-start-2 hidden sm:block">
-          <ProjectDetails
-            title="Circles of Lines"
-            role="Development"
-            year="2025"
-          ></ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="sm:row-start-2 sm:col-start-1">
-          <ProjectIllustration i={1} />
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-3 col-start-1 xl:col-start-3 hidden sm:block">
-          <ProjectDetails
-            title="Chateau de Morin"
-            role="Development"
-            year="2016"
-          ></ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-3 col-start-2 xl:ml-[-3rem]">
-          <ProjectIllustration i={2} />
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-4 col-start-2 hidden sm:block">
-          <ProjectDetails
-            title="Coming Soon"
-            role="Development"
-            year="2025"
-          ></ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-4 col-start-1 xl:col-start-3">
-          <ProjectIllustration i={3} />
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-5 col-start-1 hidden sm:block">
-          <ProjectDetails
-            title="Math is Art"
-            role="Development"
-            year="2025"
-          ></ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-5 col-start-2">
-          <ProjectIllustration i={4} />
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-6 col-start-2 hidden sm:block">
-          <ProjectDetails
-            title="Hawaya"
-            role="Direction of Engineering"
-            year="2021-2022 @MatchGroup"
-          ></ProjectDetails>
-        </AnimatedDiv>
-        <AnimatedDiv className="row-start-6 col-start-1">
-          <ProjectIllustration i={5} />
-        </AnimatedDiv>
+        <ProjectRow
+          class1="row-start-1 col-start-1 hidden sm:block"
+          class2="row-start-1 col-start-2 xl:mr-[-4rem]"
+          project={Project0}
+        />
+        <ProjectRow
+          class1="row-start-2 col-start-2 hidden sm:block"
+          class2="sm:row-start-2 sm:col-start-1"
+          project={Project1}
+        />
+        <ProjectRow
+          class1="row-start-3 col-start-1 xl:col-start-3 hidden sm:block"
+          class2="row-start-3 col-start-2 xl:ml-[-3rem]"
+          project={Project2}
+        />
+        <ProjectRow
+          class1="row-start-4 col-start-2 hidden sm:block"
+          class2="row-start-4 col-start-1 xl:col-start-3"
+          project={Project3}
+        />
+        <ProjectRow
+          class1="row-start-5 col-start-1 hidden sm:block"
+          class2="row-start-5 col-start-2"
+          project={Project4}
+        />
+        <ProjectRow
+          class1="row-start-6 col-start-2 hidden sm:block"
+          class2="row-start-6 col-start-1"
+          project={Project5}
+        />
       </div>
       <AnimatedDiv className="text-sm pb-[1rem]">
         And some [fun] projects... 💡

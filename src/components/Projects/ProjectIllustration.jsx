@@ -28,6 +28,9 @@ export const ProjectIllustration = ({ i = 0 }) => {
         className="w-full h-auto object-cover"
         //        loading="lazy"
         decoding="async"
+        onClick={() => {
+          console.log(`opening project ${i}`);
+        }}
       />
     </div>
   );

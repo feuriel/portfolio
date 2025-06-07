@@ -8,10 +8,12 @@ import { Experience } from "./components/Experience/Experience.jsx";
 import { Projects } from "./components/Projects/Projects.jsx";
 import { Contact } from "./components/Contact/Contact.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
+import { ModalProvider } from "./utility/ModalContext.jsx";
+import { Popup } from "./utility/Popup.jsx";
 
 function App() {
   return (
-    <>
+    <ModalProvider>
       <Navbar />
       <Hero />
       <SectionDivider />
@@ -24,7 +26,8 @@ function App() {
       <Contact />
       <Footer />
       <PreLoader />
-    </>
+      <Popup />
+    </ModalProvider>
   );
 }
 
