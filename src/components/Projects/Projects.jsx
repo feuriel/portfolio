@@ -4,12 +4,7 @@ import "./Projects.css";
 import { ProjectIllustration } from "./ProjectIllustration";
 import { ProjectDetails } from "./ProjectDetails";
 import { AnimatedDiv } from "../../utility/AnimatedDiv";
-import Project0 from "./data/0.json";
-import Project1 from "./data/1.json";
-import Project2 from "./data/2.json";
-import Project3 from "./data/3.json";
-import Project4 from "./data/4.json";
-import Project5 from "./data/5.json";
+import { projectsData } from "./data/projects-data";
 
 const ProjectRow = ({ class1, class2, project }) => {
   return (
@@ -45,32 +40,32 @@ export const Projects = () => {
         <ProjectRow
           class1="row-start-1 col-start-1 hidden sm:block"
           class2="row-start-1 col-start-2 xl:mr-[-4rem]"
-          project={Project0}
+          project={projectsData[0]}
         />
         <ProjectRow
           class1="row-start-2 col-start-2 hidden sm:block"
           class2="sm:row-start-2 sm:col-start-1"
-          project={Project1}
+          project={projectsData[1]}
         />
         <ProjectRow
           class1="row-start-3 col-start-1 xl:col-start-3 hidden sm:block"
           class2="row-start-3 col-start-2 xl:ml-[-3rem]"
-          project={Project2}
+          project={projectsData[2]}
         />
         <ProjectRow
           class1="row-start-4 col-start-2 hidden sm:block"
           class2="row-start-4 col-start-1 xl:col-start-3"
-          project={Project3}
+          project={projectsData[3]}
         />
         <ProjectRow
           class1="row-start-5 col-start-1 hidden sm:block"
           class2="row-start-5 col-start-2"
-          project={Project4}
+          project={projectsData[4]}
         />
         <ProjectRow
           class1="row-start-6 col-start-2 hidden sm:block"
           class2="row-start-6 col-start-1"
-          project={Project5}
+          project={projectsData[5]}
         />
       </div>
       <AnimatedDiv className="text-sm pb-[1rem]">
