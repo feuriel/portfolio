@@ -100,11 +100,19 @@ export const projectsData = [
     year: 2025,
     illustration: "src/components/Projects/assets/project3-lg.webp",
     id: 3,
+    details: (
+      <>
+        <p>
+          A lightweight React package that replaces any &lt;div&gt; with an
+          elegant "Coming Soon" placeholder. Features customizable text, perfect
+          for WIP sections or under-construction UI. Fun fact, it was used on
+          this portfolio in some of the projects !
+        </p>
+      </>
+    ),
     technology: {
       withReact: true,
-      withSass: true,
       withVite: true,
-      withVercel: true,
       withNPM: true,
     },
   },
