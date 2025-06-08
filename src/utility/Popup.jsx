@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ModalContext } from "./ModalContext";
 import { projectsData } from "../components/Projects/data/projects-data";
 import "./Popup.css";
@@ -10,6 +10,23 @@ export const Popup = () => {
   const handleOutsideClick = (e) => {
     if (e.target === e.currentTarget) closeModal();
   };
+
+  // Add keyboard event listener for Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, closeModal]);
 
   if (!isOpen) return null;
 

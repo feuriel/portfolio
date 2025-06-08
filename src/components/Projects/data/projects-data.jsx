@@ -23,9 +23,9 @@ export const projectsData = [
           scalability.
         </p>
         <p>
-          In this project, I led end-to-end development, from initial
-          architecture design to implementation. I collaborated closely with
-          stakeholders to define requirements, built scalable frontend and
+          In this project at Booking.com, I led end-to-end development, from
+          initial architecture design to implementation. I collaborated closely
+          with stakeholders to define requirements, built scalable frontend and
           backend systems, and ensured seamless integration with existing tools.
           My work enabled teams to efficiently discover, manage, and reuse
           components, reducing redundancy and accelerating development.

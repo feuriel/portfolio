@@ -4,7 +4,7 @@ export const SassLogo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       width="800px"
       height="800px"
       viewBox="0 -32 256 256"
