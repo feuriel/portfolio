@@ -1,3 +1,10 @@
+import Project0 from "../assets/project0-lg.webp";
+import Project1 from "../assets/project1-lg.webp";
+import Project2 from "../assets/project2-lg.webp";
+import Project3 from "../assets/project3-lg.webp";
+import Project4 from "../assets/project4-lg.webp";
+import Project5 from "../assets/project5-lg.webp";
+
 export const projectsData = [
   // CXC
   {
@@ -25,7 +32,7 @@ export const projectsData = [
         </p>
       </>
     ),
-    illustration: "/assets/project0-lg.webp",
+    illustration: Project0,
     id: 0,
     blocked: true,
     technology: {
@@ -59,7 +66,7 @@ export const projectsData = [
         </p>
       </>
     ),
-    illustration: "src/components/Projects/assets/project1-lg.webp",
+    illustration: Project1,
     id: 1,
     link: "https://math-is-art-gabriels.vercel.app/art/circlesOfLines/",
     technology: {
@@ -75,7 +82,7 @@ export const projectsData = [
     title: "Chateau de Morin",
     role: "Development",
     year: 2016,
-    illustration: "src/components/Projects/assets/project2-lg.webp",
+    illustration: Project2,
     details: (
       <>
         <p className="mb-4">
@@ -98,7 +105,7 @@ export const projectsData = [
     title: "Coming Soon",
     role: "Development",
     year: 2025,
-    illustration: "src/components/Projects/assets/project3-lg.webp",
+    illustration: Project3,
     id: 3,
     details: (
       <>
@@ -121,7 +128,7 @@ export const projectsData = [
     title: "math is Art",
     role: "Development",
     year: 2025,
-    illustration: "src/components/Projects/assets/project4-lg.webp",
+    illustration: Project4,
     id: 4,
     link: "https://math-is-art-gabriels.vercel.app/art/",
     details: (
@@ -140,7 +147,7 @@ export const projectsData = [
     title: "Hawaya",
     role: "Direction of Engineering",
     year: "2021-2022 @MatchGroup",
-    illustration: "src/components/Projects/assets/project5-lg.webp",
+    illustration: Project5,
     id: 5,
     link: "https://www.hawaya.com/",
     details: (
