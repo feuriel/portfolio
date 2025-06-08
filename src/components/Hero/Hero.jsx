@@ -5,6 +5,9 @@ import { LightAnimation } from "./LightAnimation.jsx";
 import "./Hero.css";
 
 export const Hero = () => {
+  const onHover = () => {
+    console.log("hover");
+  };
   return (
     <section
       id="hero"
@@ -35,7 +38,12 @@ export const Hero = () => {
           </h2>
           <h3 className="hero-subtitle text-lg font-normal">
             From leading global tech teams to crafting
-            <span title="clean, robust, and adaptable">
+            <span
+              className="hero-span"
+              onMouseEnter={onHover}
+              onClick={onHover}
+              title="clean, robust, and adaptable"
+            >
               {" "}
               elegant{/* add easter egg here */}
             </span>{" "}

@@ -12,3 +12,11 @@
     opacity: 1;
   }
 }
+
+.hero-span:active:after {
+  content: attr(title);
+  padding-inline: 3px;
+  margin-inline: 3px;
+  border: 1px solid #bbb;
+  background: var(--primary-color);
+}

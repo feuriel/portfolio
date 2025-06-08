@@ -33,17 +33,66 @@ const RandomProject = ({ name, link, stateIsLocked }) => {
 };
 
 export const Projects = () => {
-  const [isLockedMemoriel, setIsLockedMemoriel] = useState(true);
-  const [isLockedCSSAnims, setIsLockedCSSAnims] = useState(true);
-  const [isLockedCSSClock, setIsLockedCSSClock] = useState(true);
-  const [isLockedMonaLisa, setIsLockedMonaLisa] = useState(true);
-  const [isLockedPhaserStar, setIsLockedPhaserStar] = useState(true);
-  const [isLockedOuterCircle, setIsLockedOuterCircle] = useState(true);
-  const [isLockedBulbhead, setIsLockedBulbhead] = useState(true);
-  const [isLockedLanding, setIsLockedLanding] = useState(true);
-  const [isLockedLoadinmage, setIsLockedLoadinmage] = useState(true);
-  const [isLockedLocked, setIsLockedLocked] = useState(true);
-  const [isLocked, setIsLocked] = useState(true);
+  // read url params for bulbhead and cssclock
+  const urlParams = new URLSearchParams(window.location.search);
+  const isBulbhead = urlParams.get("bulbhead") === "true";
+  console.log(isBulbhead);
+  const isCSSClock = urlParams.get("cssclock") === "true";
+  if (isBulbhead) {
+    window.localStorage.setItem("bulbhead", "true");
+  }
+  if (isCSSClock) {
+    window.localStorage.setItem("cssclock", "true");
+  }
+
+  const initialIsLockedMemoriel =
+    window.localStorage.getItem("memoriel") === "true" ? false : true;
+  const initialIsLockedCSSAnims =
+    window.localStorage.getItem("cssanims") === "true" ? false : true;
+  const initialIsLockedCSSClock =
+    window.localStorage.getItem("cssclock") === "true" ? false : true;
+  const initialIsLockedMonaLisa =
+    window.localStorage.getItem("monalisa") === "true" ? false : true;
+  const initialIsLockedPhaserStar =
+    window.localStorage.getItem("phaserstar") === "true" ? false : true;
+  const initialIsLockedOuterCircle =
+    window.localStorage.getItem("outercircle") === "true" ? false : true;
+  const initialIsLockedBulbhead =
+    window.localStorage.getItem("bulbhead") === "true" ? false : true;
+  const initialIsLockedLanding = true; //window.localStorage.getItem("landing") === "true" ? false : true;
+  const initialIsLockedLoadinmage = true; //window.localStorage.getItem("landing") === "true" ? false : true;;
+  const initialIsLockedLocked = true;
+
+  const [isLockedMemoriel, setIsLockedMemoriel] = useState(
+    initialIsLockedMemoriel
+  );
+  const [isLockedCSSAnims, setIsLockedCSSAnims] = useState(
+    initialIsLockedCSSAnims
+  );
+  const [isLockedCSSClock, setIsLockedCSSClock] = useState(
+    initialIsLockedCSSClock
+  );
+  const [isLockedMonaLisa, setIsLockedMonaLisa] = useState(
+    initialIsLockedMonaLisa
+  );
+  const [isLockedPhaserStar, setIsLockedPhaserStar] = useState(
+    initialIsLockedPhaserStar
+  );
+  const [isLockedOuterCircle, setIsLockedOuterCircle] = useState(
+    initialIsLockedOuterCircle
+  );
+  const [isLockedBulbhead, setIsLockedBulbhead] = useState(
+    initialIsLockedBulbhead
+  );
+  const [isLockedLanding, setIsLockedLanding] = useState(
+    initialIsLockedLanding
+  );
+  const [isLockedLoadinmage, setIsLockedLoadinmage] = useState(
+    initialIsLockedLoadinmage
+  );
+  const [isLockedLocked, setIsLockedLocked] = useState(initialIsLockedLocked);
+  const [nbHints, setNbHints] = useState(0);
+
   return (
     <Section
       id="projects"
@@ -91,18 +140,38 @@ export const Projects = () => {
         <span
           style={{ cursor: "pointer" }}
           onClick={() => {
+            setNbHints(nbHints + 1);
             if (isLockedMemoriel && isLockedCSSAnims) {
               alert(
-                "But they are locked ! Did I tell that I love escape rooms and challenges ? You may be able to unlock all of them by finding easter eggs all over the website. Enjoy and have fun! \nOk.. Checking this already unlocked 1 of them !"
+                "Locked? Of course they are! Love escape rooms? Find the eggs, crack the code… BOOM! One unlocked just for clicking here. 😉"
               );
               setIsLockedMemoriel(false);
+              window.localStorage.setItem("memoriel", "true");
             } else if (isLockedCSSAnims) {
               alert(
-                "I see you are willing to click more here... OK I'll give you another one"
+                "🖱️ Click-happy, aren't you? Fine… here's another freebie. Shhh!"
               );
               setIsLockedCSSAnims(false);
+              window.localStorage.setItem("cssanims", "true");
+            } else if (nbHints < 3) {
+              alert("Nope! No more handouts. Go hunt those eggs 🥚 !");
+            } else if (nbHints === 3) {
+              alert(
+                "Psst… devs hide secrets in console.log. Last hint! Scout smarter 🕵️‍♂️ !"
+              );
+              if (isLockedBulbhead) {
+                const aUselessVar =
+                  "try that url : https://gabriel-somogyi.vercel.app/?bulbhead=true";
+                console.log("🕵️‍♂️ breakpoint here 🕵️‍♂️");
+              } else if (isLockedCSSClock) {
+                const a2ndUselessVar =
+                  "try that url : https://gabriel-somogyi.vercel.app/?cssclock=true";
+                console.log("🕵️‍♂️ breakpoint here 🕵️‍♂️");
+              } else if (isLockedMonaLisa) {
+                console.log("what could 'elegant' mean ?");
+              }
             } else {
-              alert("Enough ! You need to find hints elsewhere :)");
+              alert("That's it! I'm out of hints. Go poke around elsewhere!");
             }
           }}
         >
@@ -120,19 +189,75 @@ export const Projects = () => {
         </AnimatedDiv>
         <AnimatedDiv>
           <RandomProject
-            name="CSSAnims"
+            name="awCSSome"
             stateIsLocked={isLockedCSSAnims}
             link="https://cssanimationfun.vercel.app/"
           />
         </AnimatedDiv>
-        <AnimatedDiv>🔒 CSS Clock</AnimatedDiv>
-        <AnimatedDiv>🔒 Pixel Art MonaLisa</AnimatedDiv>
-        <AnimatedDiv>🔒 Phaser Star</AnimatedDiv>
-        <AnimatedDiv>🔒 Outer Circle</AnimatedDiv>
-        <AnimatedDiv>🔒 Bulbhead</AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="CSS Clock"
+            stateIsLocked={isLockedCSSClock}
+            link="https://cssclock-gabriels.vercel.app/"
+          />
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Pixel art MonaLisa"
+            stateIsLocked={isLockedMonaLisa}
+            link="https://art-style-gabriels.vercel.app/"
+          />
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Phaser Star"
+            stateIsLocked={isLockedPhaserStar}
+            link="https://collect-star-phaser-gabriels.vercel.app/"
+          />
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Outer circle"
+            stateIsLocked={isLockedOuterCircle}
+            link="https://math-is-art-gabriels.vercel.app/art/mandala1/"
+          />
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Bulbhead"
+            stateIsLocked={isLockedBulbhead}
+            link="https://www.npmjs.com/package/console_font"
+          />
+        </AnimatedDiv>
         <AnimatedDiv>🔒 Landing Page</AnimatedDiv>
         <AnimatedDiv>🔒 Loadinmage</AnimatedDiv>
-        <AnimatedDiv>🔒 Locked</AnimatedDiv>
+        <AnimatedDiv>
+          <span
+            onClick={() => {
+              window.localStorage.setItem("bulbhead", "");
+              setIsLockedBulbhead(true);
+              window.localStorage.setItem("cssclock", "");
+              setIsLockedCSSClock(true);
+              window.localStorage.setItem("memoriel", "");
+              setIsLockedMemoriel(true);
+              window.localStorage.setItem("cssanims", "");
+              setIsLockedCSSAnims(true);
+              window.localStorage.setItem("monalisa", "");
+              setIsLockedMonaLisa(true);
+              window.localStorage.setItem("phaserstar", "");
+              setIsLockedPhaserStar(true);
+              window.localStorage.setItem("outercircle", "");
+              setIsLockedOuterCircle(true);
+              window.localStorage.setItem("landing", "");
+              setIsLockedLanding(true);
+              window.localStorage.setItem("loadinmage", "");
+              setIsLockedLoadinmage(true);
+            }}
+          >
+            🔒
+          </span>{" "}
+          Locked
+        </AnimatedDiv>
       </div>
     </Section>
   );

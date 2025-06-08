@@ -12,6 +12,10 @@ import { ModalProvider } from "./utility/ModalContext.jsx";
 import { Popup } from "./utility/Popup.jsx";
 
 function App() {
+  const currentYear = new Date().getFullYear();
+  console.log(`made with ❤️ by Gabriel S.
+  https://gabriel-somogyi.vercel.app/
+  © ${currentYear} Gabriel Somogyi`);
   return (
     <ModalProvider>
       <Navbar />
