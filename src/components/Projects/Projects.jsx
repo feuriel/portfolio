@@ -24,8 +24,26 @@ const ProjectRow = ({ class1, class2, project }) => {
   );
 };
 
+const RandomProject = ({ name, link, stateIsLocked }) => {
+  return (
+    <a href={stateIsLocked ? null : link} target="_blank" rel="noreferrer">
+      {stateIsLocked ? "🔒" : "🏆"} {name}
+    </a>
+  );
+};
+
 export const Projects = () => {
-  let [isUnlocked, setIsUnlocked] = useState(false);
+  const [isLockedMemoriel, setIsLockedMemoriel] = useState(true);
+  const [isLockedCSSAnims, setIsLockedCSSAnims] = useState(true);
+  const [isLockedCSSClock, setIsLockedCSSClock] = useState(true);
+  const [isLockedMonaLisa, setIsLockedMonaLisa] = useState(true);
+  const [isLockedPhaserStar, setIsLockedPhaserStar] = useState(true);
+  const [isLockedOuterCircle, setIsLockedOuterCircle] = useState(true);
+  const [isLockedBulbhead, setIsLockedBulbhead] = useState(true);
+  const [isLockedLanding, setIsLockedLanding] = useState(true);
+  const [isLockedLoadinmage, setIsLockedLoadinmage] = useState(true);
+  const [isLockedLocked, setIsLockedLocked] = useState(true);
+  const [isLocked, setIsLocked] = useState(true);
   return (
     <Section
       id="projects"
@@ -69,12 +87,44 @@ export const Projects = () => {
         />
       </div>
       <AnimatedDiv className="text-sm pb-[1rem]">
-        And some [fun] projects... 💡
+        And some [fun] projects...{" "}
+        <span
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            if (isLockedMemoriel && isLockedCSSAnims) {
+              alert(
+                "But they are locked ! Did I tell that I love escape rooms and challenges ? You may be able to unlock all of them by finding easter eggs all over the website. Enjoy and have fun! \nOk.. Checking this already unlocked 1 of them !"
+              );
+              setIsLockedMemoriel(false);
+            } else if (isLockedCSSAnims) {
+              alert(
+                "I see you are willing to click more here... OK I'll give you another one"
+              );
+              setIsLockedCSSAnims(false);
+            } else {
+              alert("Enough ! You need to find hints elsewhere :)");
+            }
+          }}
+        >
+          💡
+        </span>
       </AnimatedDiv>
       <div className="text-sm grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
         {/* <RandomProject name="Memo-riel" icon="🔒" /> */}
-        <AnimatedDiv>🔒 Memo-riel</AnimatedDiv>
-        <AnimatedDiv>🔒 CSS Anims</AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Memo-riel"
+            stateIsLocked={isLockedMemoriel}
+            link="https://memory-game-gabriels.vercel.app/"
+          />
+        </AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="CSSAnims"
+            stateIsLocked={isLockedCSSAnims}
+            link="https://cssanimationfun.vercel.app/"
+          />
+        </AnimatedDiv>
         <AnimatedDiv>🔒 CSS Clock</AnimatedDiv>
         <AnimatedDiv>🔒 Pixel Art MonaLisa</AnimatedDiv>
         <AnimatedDiv>🔒 Phaser Star</AnimatedDiv>
@@ -83,7 +133,6 @@ export const Projects = () => {
         <AnimatedDiv>🔒 Landing Page</AnimatedDiv>
         <AnimatedDiv>🔒 Loadinmage</AnimatedDiv>
         <AnimatedDiv>🔒 Locked</AnimatedDiv>
-        <AnimatedDiv>🔒 Inner Circle</AnimatedDiv>
       </div>
     </Section>
   );
