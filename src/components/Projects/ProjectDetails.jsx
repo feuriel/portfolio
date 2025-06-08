@@ -14,8 +14,7 @@ export const ProjectDetails = ({
       <h3
         className="font-['Bebas_Neue'] text-5xl tracking-wider pb-4"
         onClick={() => {
-          console.log(`clicking project ${i}`);
-          //openModal(i);
+          openModal(i);
         }}
       >
         {title}

@@ -31,7 +31,6 @@ export const ProjectIllustration = ({ i = 0 }) => {
         //        loading="lazy"
         decoding="async"
         onClick={() => {
-          console.log(`opening project ${i}`);
           openModal(i);
         }}
       />
