@@ -1,4 +1,5 @@
 export const projectsData = [
+  // CXC
   {
     title: "CXC",
     role: "Manager, UX/UI Design, Development",
@@ -27,7 +28,18 @@ export const projectsData = [
     illustration: "src/components/Projects/assets/project0-lg.webp",
     id: 0,
     blocked: true,
+    technology: {
+      withReact: true,
+      withSass: true,
+      withTS: true,
+      withJest: true,
+      withTestingLibrary: true,
+      withPlaywright: true,
+      withAWS: true,
+      withWebpack: true,
+    },
   },
+  // Circle of Lines
   {
     title: "Circle of Lines",
     role: "Development",
@@ -50,7 +62,15 @@ export const projectsData = [
     illustration: "src/components/Projects/assets/project1-lg.webp",
     id: 1,
     link: "https://math-is-art-gabriels.vercel.app/art/circlesOfLines/",
+    technology: {
+      withReact: true,
+      withSass: true,
+      withJest: true,
+      withVite: true,
+      withVercel: true,
+    },
   },
+  // chateau de Morin
   {
     title: "Chateau de Morin",
     role: "Development",
@@ -73,20 +93,41 @@ export const projectsData = [
     link: "https://chateaudemorin.com/",
     id: 2,
   },
+  // Coming soon
   {
     title: "Coming Soon",
     role: "Development",
     year: 2025,
     illustration: "src/components/Projects/assets/project3-lg.webp",
     id: 3,
+    technology: {
+      withReact: true,
+      withSass: true,
+      withVite: true,
+      withVercel: true,
+      withNPM: true,
+    },
   },
+  // Math is Art
   {
     title: "math is Art",
     role: "Development",
     year: 2025,
     illustration: "src/components/Projects/assets/project4-lg.webp",
     id: 4,
+    link: "https://math-is-art-gabriels.vercel.app/art/",
+    details: (
+      <>
+        <p>
+          Explore the mesmerizing world of algorithmic art with my interactive
+          platform dedicated to generative experiments. From fractal landscapes
+          to evolving digital patterns, I turn code into captivating visuals.
+          Each piece is unique, dynamic, and born from mathematical beauty.
+        </p>
+      </>
+    ),
   },
+  // Hawaya
   {
     title: "Hawaya",
     role: "Direction of Engineering",
@@ -113,5 +154,12 @@ export const projectsData = [
         </p>
       </>
     ),
+    technology: {
+      withReactNative: true,
+      withTS: true,
+      withJest: true,
+      withTestingLibrary: true,
+      withGCP: true,
+    },
   },
 ];

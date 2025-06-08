@@ -59,7 +59,7 @@ export const Popup = () => {
             </a>
           </div>
           <div className="mb-4"> {projectsData[currentProject].details}</div>
-          <TechBar {...projectsData[currentProject]} />
+          <TechBar {...projectsData[currentProject].technology} />
         </div>
       </div>
     </div>

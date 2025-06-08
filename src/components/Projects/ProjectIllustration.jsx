@@ -32,7 +32,7 @@ export const ProjectIllustration = ({ i = 0 }) => {
         decoding="async"
         onClick={() => {
           console.log(`opening project ${i}`);
-          //openModal(i);
+          openModal(i);
         }}
       />
     </div>

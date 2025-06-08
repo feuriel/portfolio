@@ -30,3 +30,8 @@
   transition: transform 200ms ease-in-out;
   max-height: 400px;
 }
+
+.project-illustration {
+  overflow: hidden;
+  cursor: pointer;
+}
