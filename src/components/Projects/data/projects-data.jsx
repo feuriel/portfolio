@@ -25,7 +25,7 @@ export const projectsData = [
         </p>
       </>
     ),
-    illustration: "src/components/Projects/assets/project0-lg.webp",
+    illustration: "/assets/project0-lg.webp",
     id: 0,
     blocked: true,
     technology: {
