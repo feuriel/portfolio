@@ -9,6 +9,7 @@ import { Projects } from "./components/Projects/Projects.jsx";
 import { Contact } from "./components/Contact/Contact.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
 import { ModalProvider } from "./utility/ModalContext.jsx";
+import { RandomProjectsLockProvider } from "./utility/RandomProjectsLockContext.jsx";
 import { Popup } from "./utility/Popup.jsx";
 
 function App() {
@@ -17,21 +18,23 @@ function App() {
   https://gabriel-somogyi.vercel.app/
   © ${currentYear} Gabriel Somogyi`);
   return (
-    <ModalProvider>
-      <Navbar />
-      <Hero />
-      <SectionDivider />
-      <About />
-      <SectionDivider />
-      <Experience />
-      <SectionDivider />
-      <Projects />
-      <SectionDivider />
-      <Contact />
-      <Footer />
-      <PreLoader />
-      <Popup />
-    </ModalProvider>
+    <RandomProjectsLockProvider>
+      <ModalProvider>
+        <Navbar />
+        <Hero />
+        <SectionDivider />
+        <About />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <Contact />
+        <Footer />
+        <PreLoader />
+        <Popup />
+      </ModalProvider>
+    </RandomProjectsLockProvider>
   );
 }
 

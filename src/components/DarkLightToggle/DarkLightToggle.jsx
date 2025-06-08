@@ -1,40 +1,23 @@
-// import React from "react";
-
-// export const DarkLightToggle = () => {
-//   const onClick = () => {
-//     document.documentElement.classList.toggle("dark");
-//   };
-//   return (
-//     <div className="absolute top-10 right-10 z-10">
-//       <button onClick={onClick}>DarkLightToggle 🌞🌙 </button>
-//     </div>
-//   );
-// };
-
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useRandomProjectsLock } from "../../utility/RandomProjectsLockContext";
 
 export const DarkLightToggle = () => {
   const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    // Check for saved preference or system preference
-    const savedMode = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    if (savedMode === "dark" || (!savedMode && systemPrefersDark)) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    }
-  }, []);
+  const { RandomProjectsLocks, unlockProject } = useRandomProjectsLock();
 
   const onClick = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
     document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", newIsDark ? "dark" : "light");
+    if (
+      !RandomProjectsLocks.isPhaserStarUnlocked &&
+      isDark &&
+      RandomProjectsLocks.isMemorielUnlocked
+    ) {
+      unlockProject("isPhaserStarUnlocked");
+    }
   };
 
   return (

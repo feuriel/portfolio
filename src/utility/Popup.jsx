@@ -3,9 +3,11 @@ import { ModalContext } from "./ModalContext";
 import { projectsData } from "../components/Projects/data/projects-data";
 import "./Popup.css";
 import { TechBar } from "../components/Tech/TechBar";
+import { useRandomProjectsLock } from "./RandomProjectsLockContext.jsx";
 
 export const Popup = () => {
   const { isOpen, currentProject, closeModal } = useContext(ModalContext);
+  const { RandomProjectsLocks, unlockProject } = useRandomProjectsLock();
 
   const handleOutsideClick = (e) => {
     if (e.target === e.currentTarget) closeModal();
@@ -41,7 +43,7 @@ export const Popup = () => {
       >
         ╳
       </div>
-      <div className="popup max-w-7xl bg-[var(--base-bg-color)] m-16 rounded-md overflow-auto max-h-[80dvh]">
+      <div className="popup max-w-7xl bg-[var(--base-bg-color)] m-4 rounded-md overflow-auto max-h-[80dvh]">
         <img
           className="max-h-[300px] min-h-[250px] object-cover popup-img m-auto"
           src={projectsData[currentProject].illustration}
@@ -57,7 +59,7 @@ export const Popup = () => {
           <div className="sm:hidden mb-2 italic">
             Role: {projectsData[currentProject].role}
           </div>
-          <div className="flex gap-4 justify-center mb-4">
+          <div className="flex gap-3 justify-center mb-4">
             <a
               href={
                 projectsData[currentProject].link &&
@@ -65,6 +67,15 @@ export const Popup = () => {
                   ? projectsData[currentProject].link
                   : null
               }
+              onClick={() => {
+                console.log("clicked");
+                if (currentProject === 4) {
+                  // math is art {
+                  if (RandomProjectsLocks.isMemorielUnlocked) {
+                    unlockProject("isOuterCircleUnlocked");
+                  }
+                }
+              }}
               target="_blank"
               rel="noreferrer"
               className={`flex gap-2 px-4 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 

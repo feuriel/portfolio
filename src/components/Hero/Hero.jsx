@@ -2,11 +2,15 @@ import React from "react";
 import { Apparition } from "./Apparition.jsx";
 import { Section } from "../Section/Section.jsx";
 import { LightAnimation } from "./LightAnimation.jsx";
+import { useRandomProjectsLock } from "../../utility/RandomProjectsLockContext.jsx";
 import "./Hero.css";
 
 export const Hero = () => {
+  const { RandomProjectsLocks, unlockProject } = useRandomProjectsLock();
   const onHover = () => {
-    console.log("hover");
+    if (!RandomProjectsLocks.isMonaLisaUnlocked) {
+      unlockProject("isMonaLisaUnlocked");
+    }
   };
   return (
     <section
