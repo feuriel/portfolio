@@ -21,7 +21,7 @@ export const ProjectDetails = ({
         {title}
       </h3>
       <div className="text-sm  pb-4">{year}</div>
-      <div className="text-sm  pb-4">Role: {role}</div>
+      <div className="text-sm  pb-4 italic">Role: {role}</div>
       {/* {children} */}
     </div>
   );

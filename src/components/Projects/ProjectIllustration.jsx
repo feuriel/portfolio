@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ModalContext } from "../../utility/ModalContext";
 import "./ProjectIllustration.css";
 
 export const ProjectIllustration = ({ i = 0 }) => {
   const [imageSrc, setImageSrc] = React.useState(null);
+  const { openModal } = useContext(ModalContext);
 
   React.useEffect(() => {
     // Static import map for known images
@@ -30,6 +32,7 @@ export const ProjectIllustration = ({ i = 0 }) => {
         decoding="async"
         onClick={() => {
           console.log(`opening project ${i}`);
+          //openModal(i);
         }}
       />
     </div>
