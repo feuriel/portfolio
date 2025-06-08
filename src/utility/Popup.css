@@ -1,0 +1,8 @@
+.popup-img {
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    transparent 85%,
+    transparent 100%
+  );
+}

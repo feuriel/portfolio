@@ -44,12 +44,12 @@ export const Projects = () => {
         />
         <ProjectRow
           class1="row-start-2 col-start-2 hidden sm:block"
-          class2="sm:row-start-2 sm:col-start-1"
+          class2="sm:row-start-2 sm:col-start-1 onleft"
           project={projectsData[1]}
         />
         <ProjectRow
           class1="row-start-3 col-start-1 xl:col-start-3 hidden sm:block"
-          class2="row-start-3 col-start-2 xl:ml-[-3rem]"
+          class2="row-start-3 col-start-2 xl:ml-[-3rem] onleft"
           project={projectsData[2]}
         />
         <ProjectRow
@@ -64,7 +64,7 @@ export const Projects = () => {
         />
         <ProjectRow
           class1="row-start-6 col-start-2 hidden sm:block"
-          class2="row-start-6 col-start-1"
+          class2="row-start-6 col-start-1 onleft"
           project={projectsData[5]}
         />
       </div>
