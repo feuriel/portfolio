@@ -1,0 +1,34 @@
+/* Hide the default cursor */
+html,
+body {
+  cursor: none;
+}
+a,
+button {
+  /* transparent pixel */
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="),
+    pointer;
+}
+
+/* Pure ring cursor with perfect centering */
+.cursor {
+  position: fixed;
+  mix-blend-mode: difference;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    border-color 0.1s linear;
+  will-change: left, top;
+  z-index: 9999;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset; */
+}
+
+.cursor.pointer {
+  transform: translate(-50%, -50%) scale(1.7);
+}

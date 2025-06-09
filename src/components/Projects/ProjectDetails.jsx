@@ -12,7 +12,8 @@ export const ProjectDetails = ({
   return (
     <div>
       <h3
-        className="font-['Bebas_Neue'] text-5xl tracking-wider pb-4 cursor-pointer"
+        data-cursor-pointer="true"
+        className="font-['Bebas_Neue'] text-5xl tracking-wider pb-4"
         onClick={() => {
           openModal(i);
         }}

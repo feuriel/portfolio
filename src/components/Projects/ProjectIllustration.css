@@ -33,5 +33,5 @@
 
 .project-illustration {
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
 }

@@ -37,12 +37,12 @@ export const Popup = () => {
       className="fixed inset-0 bg-opacity-90 backdrop-blur-md z-50 overflow-hidden flex justify-center items-center"
       onClick={handleOutsideClick}
     >
-      <div
+      <a
         className="fixed top-4 right-4 cursor-pointer"
         onClick={handleOutsideClick}
       >
         ╳
-      </div>
+      </a>
       <div className="popup max-w-7xl bg-[var(--base-bg-color)] m-4 rounded-md overflow-auto max-h-[80dvh]">
         <img
           className="max-h-[300px] min-h-[250px] object-cover popup-img m-auto"
@@ -68,7 +68,6 @@ export const Popup = () => {
                   : null
               }
               onClick={() => {
-                console.log("clicked");
                 if (currentProject === 4) {
                   // math is art {
                   if (RandomProjectsLocks.isMemorielUnlocked) {

@@ -5,9 +5,10 @@ const FAQSection = ({ title, description }) => {
   return (
     <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
       <summary className="flex items-center justify-between gap-1.5">
-        <h2>{title}</h2>
+        <h2 data-cursor-pointer="true">{title}</h2>
         <svg
-          className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180 hover:cursor-pointer"
+          data-cursor-pointer="true"
+          className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"

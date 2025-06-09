@@ -23,12 +23,11 @@ export const ProjectIllustration = ({ i = 0 }) => {
   }, [i]);
 
   return (
-    <div className="project-illustration">
+    <div data-cursor-pointer="true" className="project-illustration">
       <img
         src={imageSrc}
         alt={`Project ${i} illustration`}
         className="w-full h-auto object-cover"
-        //        loading="lazy"
         decoding="async"
         onClick={() => {
           openModal(i);

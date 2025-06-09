@@ -11,6 +11,7 @@ import { Footer } from "./components/Footer/Footer.jsx";
 import { ModalProvider } from "./utility/ModalContext.jsx";
 import { RandomProjectsLockProvider } from "./utility/RandomProjectsLockContext.jsx";
 import { Popup } from "./utility/Popup.jsx";
+import Cursor from "./components/Cursor/Cursor.jsx";
 
 function App() {
   const currentYear = new Date().getFullYear();
@@ -20,6 +21,7 @@ function App() {
   return (
     <RandomProjectsLockProvider>
       <ModalProvider>
+        <Cursor />
         <Navbar />
         <Hero />
         <SectionDivider />
