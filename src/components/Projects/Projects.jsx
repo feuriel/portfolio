@@ -87,7 +87,7 @@ export const Projects = () => {
       <AnimatedDiv className="text-sm pb-[1rem]">
         And some [fun] projects...{" "}
         <span
-          style={{ cursor: "pointer" }}
+          data-cursor-pointer="true"
           onClick={() => {
             if (!RandomProjectsLocks.isMemorielUnlocked) {
               alert(

@@ -46,10 +46,12 @@ const Cursor = () => {
         while (el && el !== document.body) {
           const style = window.getComputedStyle(el);
           if (
-            style.cursor === "pointer" ||
             style.cursor ===
-              'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="), pointer' ||
-            el.hasAttribute("data-cursor-pointer")
+              'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="), auto' ||
+            style.cursor ===
+              'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVDhPY/j//z8D0UDUAMHEBQYA1/YE9/YaVgAAAABJRU5ErkJggg=="), auto' ||
+            el.hasAttribute("data-cursor-pointer") ||
+            style.cursor === "pointer"
           ) {
             isPointerEl = true;
             break;
