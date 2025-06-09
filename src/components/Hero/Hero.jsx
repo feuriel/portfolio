@@ -8,7 +8,10 @@ import "./Hero.css";
 export const Hero = () => {
   const { RandomProjectsLocks, unlockProject } = useRandomProjectsLock();
   const onHover = () => {
-    if (!RandomProjectsLocks.isMonaLisaUnlocked) {
+    if (
+      !RandomProjectsLocks.isMonaLisaUnlocked &&
+      RandomProjectsLocks.isMemorielUnlocked
+    ) {
       unlockProject("isMonaLisaUnlocked");
     }
   };
