@@ -15,7 +15,11 @@ export const ContactSide = ({ className }) => {
       </p>
       <p>
         You can also reach out on my social network and{" "}
-        <a href={Resume} download className="underline">
+        <a
+          href={Resume}
+          download="GabrielSomogyi_Resume_2025.pdf"
+          className="underline"
+        >
           download my resume
         </a>
         .
