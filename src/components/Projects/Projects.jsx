@@ -27,7 +27,13 @@ const ProjectRow = ({ class1, class2, project }) => {
 
 const RandomProject = ({ name, link, stateIsUnlocked }) => {
   return (
-    <a href={stateIsUnlocked ? link : null} target="_blank" rel="noreferrer">
+    <a
+      data-cursor-pointer={stateIsUnlocked ? "true" : null}
+      href={stateIsUnlocked ? link : null}
+      target="_blank"
+      rel="noreferrer"
+      style={{ cursor: "none" }}
+    >
       {stateIsUnlocked ? "🏆" : "🔒"} {name}
     </a>
   );

@@ -53,6 +53,7 @@ const Cursor = () => {
             el.hasAttribute("data-cursor-pointer") ||
             style.cursor === "pointer"
           ) {
+            console.log(el.hasAttribute("data-cursor-pointer"));
             isPointerEl = true;
             break;
           }

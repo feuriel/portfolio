@@ -3,7 +3,12 @@ import "./GMail.css";
 
 export const GMail = ({ height = 48, width = 48 }) => {
   return (
-    <a href="mailto:gabriel.somogyi.feuga@gmail.com" rel="noreferrer">
+    <a
+      href="mailto:gabriel.somogyi.feuga@gmail.com"
+      rel="noreferrer"
+      data-cursor-pointer="true"
+      style={{ cursor: "none" }}
+    >
       <svg
         className="gmail-icon"
         xmlns="http://www.w3.org/2000/svg"

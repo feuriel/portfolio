@@ -22,6 +22,8 @@ export const DarkLightToggle = () => {
 
   return (
     <button
+      data-cursor-pointer="true"
+      style={{ cursor: "none" }}
       onClick={onClick}
       className="w-12 h-12 rounded-full flex items-center justify-center
                   hover:bg-neutral-700 transition-all duration-300 shadow-md hover:shadow-xl

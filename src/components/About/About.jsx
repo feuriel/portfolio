@@ -50,9 +50,11 @@ export const About = () => {
         </p>
         <div className="flex gap-4 justify-center md:justify-start">
           <a
+            data-cursor-pointer="true"
+            style={{ cursor: "none" }}
             href={"#contact"}
             className="flex gap-2 px-4 py-3 bg-[color:var(--primary-color)] hover:bg-[color:var(--primary-hover)] 
-          text-black font-medium rounded-md transition-colors duration-150 pointer"
+          text-black font-medium rounded-md transition-colors duration-150"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +73,8 @@ export const About = () => {
             Contact me
           </a>
           <a
+            data-cursor-pointer="true"
+            style={{ cursor: "none" }}
             href="#projects"
             className="px-4 py-3 secondary-button font-medium rounded-md transition-colors duration-150 pointer bg-[var(--background-color)] hover:bg-[var(--background-color-hover)] text-[color:var(--text-color)]"
           >

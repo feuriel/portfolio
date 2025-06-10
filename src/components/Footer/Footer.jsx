@@ -12,7 +12,7 @@ export const Footer = () => {
       className="grid grid-cols-2 md:grid-cols-3  py-12"
     >
       <div className="justify-self-start">
-        <a href="#">
+        <a href="#" data-cursor-pointer="true" style={{ cursor: "none" }}>
           <Logo size={54} className="no" />
         </a>
         <p className="text-sm">

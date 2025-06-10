@@ -3,7 +3,13 @@ import "./Github.css";
 
 export const Github = ({ height = 48, width = 48 }) => {
   return (
-    <a href="https://github.com/feuriel" target="_blank" rel="noreferrer">
+    <a
+      href="https://github.com/feuriel"
+      target="_blank"
+      rel="noreferrer"
+      data-cursor-pointer="true"
+      style={{ cursor: "none" }}
+    >
       <svg
         className="github-icon"
         xmlns="http://www.w3.org/2000/svg"

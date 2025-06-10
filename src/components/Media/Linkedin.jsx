@@ -7,6 +7,8 @@ export const Linkedin = ({ height = 48, width = 48 }) => {
       href="https://www.linkedin.com/in/gabriel-somogyi-8b841960/"
       target="_blank"
       rel="noreferrer"
+      data-cursor-pointer="true"
+      style={{ cursor: "none" }}
     >
       <svg
         className="linkedin-icon"
