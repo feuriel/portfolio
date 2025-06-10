@@ -35,7 +35,6 @@ export const UnderConstruction = ({
   text = "UNDER CONSTRUCTION",
 }) => {
   const containerRef = useRef(null);
-  console.log("here");
   const { angle, length } = useDiagonalAngle(containerRef);
   return (
     <div ref={containerRef} className="relative w-full h-dvh overflow-hidden">
