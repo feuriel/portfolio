@@ -67,7 +67,7 @@ export const FAQ = () => {
               "Everyone's chasing cutting-edge solutions, what's your take ?"
             }
             description={
-              "Simplicity is the new complexity. I appreciate systems that are so simple that they just seem lazy."
+              "Simplicity is the new complexity. I appreciate systems that look so simple that they just seem lazy."
             }
           />
         </div>
