@@ -67,7 +67,7 @@
   background-color: none;
   /* border: 1px solid oklch(from var(--primary-color) l c h / 0.7); */
   right: calc(100% - 2.5rem);
-  filter: grayscale(0.8);
+  filter: grayscale(0.3);
 }
 .timeline-item:nth-child(2n) .svg-container {
   left: 0;
