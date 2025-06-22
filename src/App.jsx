@@ -18,6 +18,8 @@ function App() {
   console.log(`made with ❤️ by Gabriel S.
   https://gabriel-somogyi.vercel.app/
   © ${currentYear} Gabriel Somogyi`);
+
+  // should add with or without cursor -- activate as project unlock (and read from localStorage)
   return (
     <RandomProjectsLockProvider>
       <ModalProvider>
