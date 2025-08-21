@@ -189,7 +189,13 @@ export const Projects = () => {
         </AnimatedDiv>
         <AnimatedDiv>🔒 Landing Page</AnimatedDiv>
         <AnimatedDiv>🔒 Loadinmage</AnimatedDiv>
-        <AnimatedDiv>🔒 Ring cursor</AnimatedDiv>
+        <AnimatedDiv>
+          <RandomProject
+            name="Ring cursor"
+            stateIsUnlocked={RandomProjectsLocks.isRingCursorUnlocked}
+            link=""
+          />
+        </AnimatedDiv>
         <AnimatedDiv>
           <span onClick={() => lockAllProjects()}>🔒</span> Locked
         </AnimatedDiv>

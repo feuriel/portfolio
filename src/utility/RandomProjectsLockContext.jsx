@@ -34,6 +34,8 @@ export const RandomProjectsLockProvider = ({ children }) => {
       localStorage.getItem("isOuterCircleUnlocked") === "true" ? true : false,
     isBulbheadUnlocked:
       localStorage.getItem("isBulbheadUnlocked") === "true" ? true : false,
+    isRingCursorUnlocked:
+      localStorage.getItem("isRingCursorUnlocked") === "true" ? true : false,
     isLandingUnlocked: false,
     isLoadinmageUnlocked: false,
     isLockedUnlocked: false,
@@ -58,6 +60,7 @@ export const RandomProjectsLockProvider = ({ children }) => {
       isPhaserStarUnlocked: false,
       isOuterCircleUnlocked: false,
       isBulbheadUnlocked: false,
+      isRingCursorUnlocked: false,
       isLandingUnlocked: false,
       isLoadinmageUnlocked: false,
     }));
@@ -70,6 +73,7 @@ export const RandomProjectsLockProvider = ({ children }) => {
     localStorage.setItem("isBulbheadUnlocked", false);
     localStorage.setItem("isLandingUnlocked", false);
     localStorage.setItem("isLoadinmageUnlocked", false);
+    localStorage.setItem("isRingCursorUnlocked", false);
   };
 
   return (
