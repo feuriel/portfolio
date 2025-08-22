@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useRandomProjectsLock } from "../../utility/RandomProjectsLockContext";
+import "./DarkLightToggle.css";
 
 export const DarkLightToggle = () => {
   const [isDark, setIsDark] = useState(false);
@@ -9,8 +10,16 @@ export const DarkLightToggle = () => {
 
   const onClick = () => {
     const newIsDark = !isDark;
-    setIsDark(newIsDark);
-    document.documentElement.classList.toggle("dark");
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        setIsDark(newIsDark);
+        document.documentElement.classList.toggle("dark");
+      });
+    } else {
+      setIsDark(newIsDark);
+      document.documentElement.classList.toggle("dark");
+    }
+
     if (
       !RandomProjectsLocks.isPhaserStarUnlocked &&
       isDark &&
